@@ -30,7 +30,7 @@ public class test {
     public User getUser() {
         User user = new User();
         user.setUserName("blaife");
-        user.setPassWorld("0121");
+        user.setPassWord("0121");
         return user;
     }
 
@@ -54,7 +54,7 @@ public class test {
     public User getUserByCache() {
         User user = new User();
         user.setUserName("blaife");
-        user.setPassWorld("0121");
+        user.setPassWord("0121");
         System.out.println("测试是否使用缓存读取");
         return user;
     }

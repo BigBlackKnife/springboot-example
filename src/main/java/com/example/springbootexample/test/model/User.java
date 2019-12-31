@@ -1,37 +1,38 @@
 package com.example.springbootexample.test.model;
 
 public class User {
+
     private String userName;
-    private String passWorld;
+    private String passWord;
 
     public User() {}
 
-    public User(String userName, String passWorld) {
+    public User(String userName, String passWord) {
         this.userName = userName;
-        this.passWorld = passWorld;
+        this.passWord = passWord;
     }
 
     public String getUserName() {
         return userName;
     }
 
-    public String getPassWorld() {
-        return passWorld;
+    public String getPassWord() {
+        return passWord;
     }
 
     public void setUserName(String userName) {
         this.userName = userName;
     }
 
-    public void setPassWorld(String passWorld) {
-        this.passWorld = passWorld;
+    public void setPassWord(String passWord) {
+        this.passWord = passWord;
     }
 
     @Override
     public String toString() {
         return "User{" +
                 "userName='" + userName + '\'' +
-                ", passWorld='" + passWorld + '\'' +
+                ", passWord='" + passWord + '\'' +
                 '}';
     }
 }

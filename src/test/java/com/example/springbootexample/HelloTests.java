@@ -1,3 +1,5 @@
+package com.example.springbootexample;
+
 import com.example.springbootexample.test.controller.test;
 import org.junit.Before;
 import org.junit.runner.RunWith;
