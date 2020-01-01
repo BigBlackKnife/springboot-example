@@ -1,6 +1,6 @@
-package com.example.springbootexample.test.mapper;
+package com.blaife.test.mapper;
 
-import com.example.springbootexample.test.model.User;
+import com.blaife.test.model.User;
 import org.apache.ibatis.annotations.Result;
 import org.apache.ibatis.annotations.Results;
 import org.apache.ibatis.annotations.Select;

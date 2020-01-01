@@ -1,6 +1,6 @@
-package com.example.springbootexample;
+package com.blaife;
 
-import com.example.springbootexample.test.controller.test;
+import com.blaife.test.controller.test;
 import org.junit.Before;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;

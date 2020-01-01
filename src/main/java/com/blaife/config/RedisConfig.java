@@ -1,4 +1,4 @@
-package com.example.springbootexample.config;
+package com.blaife.config;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.PropertyAccessor;

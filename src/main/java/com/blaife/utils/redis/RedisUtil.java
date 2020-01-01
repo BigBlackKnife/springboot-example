@@ -1,4 +1,4 @@
-package com.example.springbootexample.utils.redis;
+package com.blaife.utils.redis;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;

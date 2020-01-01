@@ -1,6 +1,6 @@
-package com.example.springbootexample;
+package com.blaife;
 
-import com.example.springbootexample.test.model.User;
+import com.blaife.test.model.User;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;

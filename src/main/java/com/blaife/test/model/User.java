@@ -1,4 +1,4 @@
-package com.example.springbootexample.test.model;
+package com.blaife.test.model;
 
 public class User {
 

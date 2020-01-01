@@ -1,7 +1,7 @@
-package com.example.springbootexample.test.controller;
+package com.blaife.test.controller;
 
-import com.example.springbootexample.test.model.NeoProperties;
-import com.example.springbootexample.test.model.User;
+import com.blaife.test.model.NeoProperties;
+import com.blaife.test.model.User;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

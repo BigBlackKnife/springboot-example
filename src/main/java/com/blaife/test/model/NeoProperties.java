@@ -1,4 +1,4 @@
-package com.example.springbootexample.test.model;
+package com.blaife.test.model;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
@@ -6,9 +6,9 @@ import org.springframework.stereotype.Component;
 @Component
 public class NeoProperties {
 
-    @Value("${com.neo.title}")
+    @Value("${com.blaife.title}")
     private String title;
-    @Value("${com.neo.description}")
+    @Value("${com.blaife.description}")
     private String description;
 
     public String getTitle() {

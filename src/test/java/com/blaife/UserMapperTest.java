@@ -1,8 +1,8 @@
-package com.example.springbootexample;
+package com.blaife;
 
-import com.example.springbootexample.test.mapper.UserMapper;
-import com.example.springbootexample.test.mapper.UserMapperT;
-import com.example.springbootexample.test.model.User;
+import com.blaife.test.mapper.UserMapper;
+import com.blaife.test.mapper.UserMapperT;
+import com.blaife.test.model.User;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

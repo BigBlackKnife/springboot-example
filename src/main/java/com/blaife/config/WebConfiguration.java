@@ -1,4 +1,4 @@
-package com.example.springbootexample.config;
+package com.blaife.config;
 
 import org.apache.catalina.filters.RemoteIpFilter;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
