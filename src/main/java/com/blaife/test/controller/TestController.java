@@ -11,7 +11,7 @@ import java.util.UUID;
 
 @RestController
 @RequestMapping("/test")
-public class test {
+public class TestController {
 
     /**
      * 测试helloworld
@@ -46,7 +46,11 @@ public class test {
     }
 
     /**
-     * 通过缓存访问
+     * 通过缓存访问 (通过缓存访问目前依旧存在问题)
+     *
+     * 错误如下：
+     * java.lang.IllegalArgumentException: DefaultSerializer requires a Serializable
+     * payload but received an object of type [com.blaife.test.model.User]
      * @return
      */
     @RequestMapping("/getUserByCache")
