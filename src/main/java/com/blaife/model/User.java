@@ -1,4 +1,4 @@
-package com.blaife.test.model;
+package com.blaife.model;
 
 public class User {
 
