@@ -1,8 +1,11 @@
-package com.blaife.test.model;
+package com.blaife.model;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
+/**
+ * 测试属性值是否可以提取（问题：new 出对象之后数据值为null）
+ */
 @Component
 public class NeoProperties {
 
