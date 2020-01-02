@@ -51,7 +51,10 @@ public class RedisConfig extends CachingConfigurerSupport {
     }
 
 
-
+    /**
+     * redis缓存配置方法
+     * @return
+     */
     @Bean
     public KeyGenerator keyGenerator() {
         return new KeyGenerator() {
