@@ -1,6 +1,6 @@
 package com.blaife;
 
-import com.blaife.test.model.User;
+import com.blaife.model.User;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
