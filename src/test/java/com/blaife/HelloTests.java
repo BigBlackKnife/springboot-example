@@ -1,6 +1,6 @@
 package com.blaife;
 
-import com.blaife.test.controller.test;
+import com.blaife.test.controller.TestController;
 import org.junit.Before;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -24,7 +24,7 @@ public class HelloTests {
 
     @Before
     public void setUp() {
-        mvc = MockMvcBuilders.standaloneSetup(new test()).build();
+        mvc = MockMvcBuilders.standaloneSetup(new TestController()).build();
     }
 
     public void getHello() throws Exception {
