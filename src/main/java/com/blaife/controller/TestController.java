@@ -1,7 +1,8 @@
-package com.blaife.test.controller;
+package com.blaife.controller;
 
-import com.blaife.test.model.NeoProperties;
-import com.blaife.test.model.User;
+
+import com.blaife.model.NeoProperties;
+import com.blaife.model.User;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -9,6 +10,9 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.servlet.http.HttpSession;
 import java.util.UUID;
 
+/**
+ *
+ */
 @RestController
 @RequestMapping("/test")
 public class TestController {
@@ -63,7 +67,6 @@ public class TestController {
         return user;
     }
 
-
     /**
      * 将uid存入session
      * @param session
@@ -78,4 +81,5 @@ public class TestController {
         session.setAttribute("uid", uid);
         return session.getId();
     }
+
 }
