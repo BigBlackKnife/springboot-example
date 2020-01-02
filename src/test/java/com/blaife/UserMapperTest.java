@@ -11,6 +11,9 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.List;
 
+/**
+ * Mysql查询Users 数据表方法
+ */
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class UserMapperTest {

@@ -18,8 +18,8 @@ public interface UserMapper {
      */
     @Select("SELECT * FROM users")
     @Results({
-            @Result(property = "userName",  column = "name"),
-            @Result(property = "passWord", column = "password")
+            @Result(property = "userName",  column = "userName"),
+            @Result(property = "passWord", column = "passWord")
     })
     List<User> getAll();
 

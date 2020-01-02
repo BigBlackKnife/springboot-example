@@ -2,6 +2,7 @@ package com.blaife.test.model;
 
 public class User {
 
+    private String id;
     private String userName;
     private String passWord;
 
@@ -11,6 +12,8 @@ public class User {
         this.userName = userName;
         this.passWord = passWord;
     }
+
+    public String getId() { return id; }
 
     public String getUserName() {
         return userName;
@@ -27,6 +30,8 @@ public class User {
     public void setPassWord(String passWord) {
         this.passWord = passWord;
     }
+
+    public void setId(String id) { this.id = id; }
 
     @Override
     public String toString() {

@@ -9,6 +9,9 @@ import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 
+/**
+ * 过滤器配置类
+ */
 @Configuration
 public class WebConfiguration {
 
