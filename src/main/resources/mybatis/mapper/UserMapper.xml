@@ -3,7 +3,7 @@
 
 <mapper namespace="com.blaife.mapper.UserMapperT" >
 
-    <resultMap id="userResultMap" type="com.blaife.model.User"></resultMap>
+    <resultMap id="userResultMap" type="com.blaife.model.MyBaitsPlusTest"></resultMap>
 
     <select id="getAll" resultMap="userResultMap"  >
         SELECT * FROM users
