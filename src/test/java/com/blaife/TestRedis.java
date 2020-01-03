@@ -1,6 +1,6 @@
 package com.blaife;
 
-import com.blaife.model.User;
+import com.blaife.model.MyBaitsPlusTest;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -32,8 +32,10 @@ public class TestRedis {
 
     @Test
     public void testObj() throws Exception {
-        User user=new User("aa@126.com", "aa");
-        ValueOperations<String, User> operations=redisTemplate.opsForValue();
+        MyBaitsPlusTest user=new MyBaitsPlusTest();
+        user.setUserName("blaife");
+        user.setPassWord("123456");
+        ValueOperations<String, MyBaitsPlusTest> operations=redisTemplate.opsForValue();
         operations.set("com.neos", user);
         operations.set("com.neo.f", user,1, TimeUnit.SECONDS);
         Thread.sleep(1000);

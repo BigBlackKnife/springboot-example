@@ -2,7 +2,7 @@ package com.blaife;
 
 import com.blaife.mapper.UserMapper;
 import com.blaife.mapper.UserMapperT;
-import com.blaife.model.User;
+import com.blaife.model.MyBaitsPlusTest;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,13 +27,13 @@ public class UserMapperTest {
 
     @Test
     public void testQuery() throws Exception {
-        List<User> users = userMapper.getAll();
+        List<MyBaitsPlusTest> users = userMapper.getAll();
         System.out.println(users.toString());
     }
 
     @Test
     public void testQuery2() throws Exception {
-        List<User> users = userMapperT.getAll();
+        List<MyBaitsPlusTest> users = userMapperT.getAll();
         System.out.println(users.toString());
     }
 
