@@ -2,7 +2,7 @@ package com.blaife.controller;
 
 
 import com.blaife.model.NeoProperties;
-import com.blaife.model.User;
+import com.blaife.model.MyBaitsPlusTest;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -31,13 +31,12 @@ public class TestController {
      * @return
      */
     @RequestMapping("getUser")
-    public User getUser() {
-        User user = new User();
+    public MyBaitsPlusTest getUser() {
+        MyBaitsPlusTest user = new MyBaitsPlusTest();
         user.setUserName("blaife");
         user.setPassWord("0121");
         return user;
     }
-
 
     /**
      * 测试配置文件
@@ -59,8 +58,8 @@ public class TestController {
      */
     @RequestMapping("/getUserByCache")
     @Cacheable(value = "user-key")
-    public User getUserByCache() {
-        User user = new User();
+    public MyBaitsPlusTest getUserByCache() {
+        MyBaitsPlusTest user = new MyBaitsPlusTest();
         user.setUserName("blaife");
         user.setPassWord("0121");
         System.out.println("测试是否使用缓存读取");
