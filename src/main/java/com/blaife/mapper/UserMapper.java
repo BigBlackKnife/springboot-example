@@ -1,6 +1,6 @@
 package com.blaife.mapper;
 
-import com.blaife.model.User;
+import com.blaife.model.MyBaitsPlusTest;
 import org.apache.ibatis.annotations.Result;
 import org.apache.ibatis.annotations.Results;
 import org.apache.ibatis.annotations.Select;
@@ -21,7 +21,7 @@ public interface UserMapper {
             @Result(property = "userName",  column = "userName"),
             @Result(property = "passWord", column = "passWord")
     })
-    List<User> getAll();
+    List<MyBaitsPlusTest> getAll();
 
 
 
