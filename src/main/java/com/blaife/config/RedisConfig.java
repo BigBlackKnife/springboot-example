@@ -1,5 +1,6 @@
 package com.blaife.config;
 
+
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.PropertyAccessor;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -14,7 +15,6 @@ import org.springframework.data.redis.serializer.Jackson2JsonRedisSerializer;
 import org.springframework.data.redis.serializer.StringRedisSerializer;
 
 import java.lang.reflect.Method;
-
 /**
  * Redis配置类
  */
@@ -24,6 +24,8 @@ public class RedisConfig extends CachingConfigurerSupport {
 
     /**
      * 自定义redis模板 <String, Object>
+     * redisTemplate使用默认的jdk序列化会导致客户端查看不了数据
+     * 使用StringRedisTemplate并自行配置序列化
      * @param factory
      * @return
      */
