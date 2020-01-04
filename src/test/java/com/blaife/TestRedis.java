@@ -1,53 +1,25 @@
 package com.blaife;
 
-import com.blaife.model.MyBaitsPlusTest;
-import org.junit.Assert;
+import com.blaife.utils.redis.RedisUtil;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.data.redis.core.RedisTemplate;
-import org.springframework.data.redis.core.StringRedisTemplate;
-import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import java.util.concurrent.TimeUnit;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class TestRedis {
-
-
     @Autowired
-    private StringRedisTemplate stringRedisTemplate;
+    RedisUtil redisUtil;
 
-    @Autowired
-    private RedisTemplate redisTemplate;
-
+    /**
+     * 简单的测试redis String 类型数据的存储和读取
+     */
     @Test
-    public void test() throws Exception {
-        stringRedisTemplate.opsForValue().set("aaa", "111");
-        Assert.assertEquals("111", stringRedisTemplate.opsForValue().get("aaa"));
+    public void testSetKey() {
+        redisUtil.set("ss", "sda");
+        System.out.println(redisUtil.get("ss"));
     }
-
-    @Test
-    public void testObj() throws Exception {
-        MyBaitsPlusTest user=new MyBaitsPlusTest();
-        user.setUserName("blaife");
-        user.setPassWord("123456");
-        ValueOperations<String, MyBaitsPlusTest> operations=redisTemplate.opsForValue();
-        operations.set("com.neos", user);
-        operations.set("com.neo.f", user,1, TimeUnit.SECONDS);
-        Thread.sleep(1000);
-        //redisTemplate.delete("com.neo.f");
-        boolean exists=redisTemplate.hasKey("com.neos");
-        if(exists){
-            System.out.println("exists is true");
-        }else{
-            System.out.println("exists is false");
-        }
-        // Assert.assertEquals("aa", operations.get("com.neo.f").getUserName());
-    }
-
-
 }
