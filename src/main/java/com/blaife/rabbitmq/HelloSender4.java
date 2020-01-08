@@ -10,15 +10,15 @@ import java.util.Date;
  * 生产者
  */
 @Component
-public class HelloSender2 {
+public class HelloSender4 {
 
     @Autowired
     private AmqpTemplate rabbitTemplate;
 
-    public void send(int i) {
+    public void send(String i) {
         String context = "hello " + i + " " + new Date();
-        System.out.println("Sender2 : " + context);
-        this.rabbitTemplate.convertAndSend("hello", context);
+        System.out.println("Sender4 : " + context);
+        this.rabbitTemplate.convertAndSend("hello2", context);
     }
 
 }
