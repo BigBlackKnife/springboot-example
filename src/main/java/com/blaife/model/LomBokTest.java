@@ -4,6 +4,8 @@ import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.io.Serializable;
+
 /**
  * lombok测试类
  *  * @Getter get方法（可以在类上或者在属性上）
@@ -21,7 +23,7 @@ import lombok.Setter;
  */
 
 @Data
-public class LomBokTest {
+public class LomBokTest implements Serializable {
     private String name;
     private String age;
     private String pwd;
