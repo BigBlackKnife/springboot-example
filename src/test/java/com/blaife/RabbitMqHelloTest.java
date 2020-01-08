@@ -1,7 +1,6 @@
 package com.blaife;
 
-import com.blaife.rabbitmq.HelloSender;
-import com.blaife.rabbitmq.HelloSender2;
+import com.blaife.rabbitmq.*;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +16,15 @@ public class RabbitMqHelloTest {
 
     @Autowired
     private HelloSender2 helloSender2;
+
+    @Autowired
+    private HelloSender3 helloSender3;
+
+    @Autowired
+    private HelloSender4 helloSender4;
+
+    @Autowired
+    private HelloSender5 helloSender5;
 
     /**
      * 1对1发送 单条数据测试
@@ -36,5 +44,22 @@ public class RabbitMqHelloTest {
         for (int i = 0; i < 100; i++) {
             helloSender2.send(i);
         }
+    }
+
+    /**
+     * 多对一发送 两条数据测试
+     */
+    @Test
+    public void hello2() {
+        helloSender3.send("one");
+        helloSender4.send("two");
+    }
+
+    /**
+     * 多对一发送 两条数据测试
+     */
+    @Test
+    public void helloModel() {
+        helloSender5.send();
     }
 }
