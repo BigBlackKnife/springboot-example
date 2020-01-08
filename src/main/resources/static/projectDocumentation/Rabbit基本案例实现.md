@@ -159,3 +159,4 @@ public class RabbitMqHelloTest {
     }
 }
 ```
+需要注意的是发送的如果是model对象，需要model对象实现序列化，不要发送时对提示对象序列化失败等信息
