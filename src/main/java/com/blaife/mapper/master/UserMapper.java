@@ -1,4 +1,4 @@
-package com.blaife.mapper;
+package com.blaife.mapper.master;
 
 import com.blaife.model.MyBaitsPlusTest;
 import org.apache.ibatis.annotations.Result;
