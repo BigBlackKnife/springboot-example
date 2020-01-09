@@ -3,6 +3,8 @@ package com.blaife.controller;
 
 import com.blaife.model.NeoProperties;
 import com.blaife.model.MyBaitsPlusTest;
+import com.blaife.utils.mail.MailUtil;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -16,6 +18,9 @@ import java.util.UUID;
 @RestController
 @RequestMapping("/test")
 public class TestController {
+
+    @Autowired
+    private MailUtil mailUtil;
 
     /**
      * 测试helloworld
@@ -79,6 +84,12 @@ public class TestController {
         }
         session.setAttribute("uid", uid);
         return session.getId();
+    }
+
+    @RequestMapping("/testMail")
+    public String testMail() {
+        mailUtil.sendSimpleMail("439427296@qq.com","2020/1/9 温玖","你有想我吗");
+        return "testMail";
     }
 
 }
