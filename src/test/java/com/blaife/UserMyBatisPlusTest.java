@@ -1,6 +1,6 @@
 package com.blaife;
 
-import com.blaife.mapper.MyBatisPlusTestMapper;
+import com.blaife.mapper.master.MyBatisPlusTestMapper;
 import com.blaife.model.MyBaitsPlusTest;
 import org.junit.Test;
 import org.junit.runner.RunWith;

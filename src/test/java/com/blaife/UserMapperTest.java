@@ -1,7 +1,7 @@
 package com.blaife;
 
-import com.blaife.mapper.UserMapper;
-import com.blaife.mapper.UserMapperT;
+import com.blaife.mapper.master.UserMapper;
+import com.blaife.mapper.master.UserMapperT;
 import com.blaife.model.MyBaitsPlusTest;
 import org.junit.Test;
 import org.junit.runner.RunWith;
