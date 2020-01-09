@@ -6,6 +6,8 @@ import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 
+import java.io.Serializable;
+
 /**
  * mybatis-plus 注解
  * @TableName : 表名注解
@@ -25,7 +27,7 @@ import lombok.Data;
  */
 @Data
 @TableName("users")
-public class MyBaitsPlusTest {
+public class MyBaitsPlusTest implements Serializable {
 
     @TableId(value = "id", type = IdType.AUTO)
     private String id;
