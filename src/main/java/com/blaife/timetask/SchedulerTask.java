@@ -19,14 +19,14 @@ public class SchedulerTask {
     @Scheduled(cron="*0/6 * * * * * ")
     @Async
     public void process() {
-        try {
-            System.out.println("休眠开始");
+        /*try {
+            //System.out.println("休眠开始");
             Thread.sleep(10000);
-            System.out.println("休眠结束");
+            //System.out.println("休眠结束");
         } catch (InterruptedException e) {
             e.printStackTrace();
-        }
-        System.out.println("process：" + LocalDateTime.now());
+        }*/
+        // System.out.println("process：" + LocalDateTime.now());
     }
 
     /**
@@ -36,6 +36,6 @@ public class SchedulerTask {
     @Scheduled(fixedRate = 6000)
     @Async
     public void reportCurrentTime() {
-        System.out.println("现在时间：" + LocalDateTime.now());
+        // System.out.println("现在时间：" + LocalDateTime.now());
     }
 }
