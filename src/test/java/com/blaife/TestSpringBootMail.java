@@ -60,6 +60,9 @@ public class TestSpringBootMail {
         mail.sendInlineResourceMail("conner_dong@163.com", "主题：这是有图片的邮件", content, imgPath, rscId);
     }
 
+    /**
+     * 测试模板化的mail发送
+     */
     @Test
     public void testTemplateMail() {
         mail.sendTemplateVerifyMail("conner_dong@163.com", "主题：这是模板化的邮件", "blaife", "0121") ;
