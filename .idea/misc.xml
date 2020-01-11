@@ -5,7 +5,6 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/spring-boot-mail/pom.xml" />
-        <option value="$PROJECT_DIR$/speing-boot-redis/pom.xml" />
       </list>
     </option>
   </component>
