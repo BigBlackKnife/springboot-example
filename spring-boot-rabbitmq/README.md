@@ -28,7 +28,27 @@
 </dependency>
 ```
 
-### 配置文件
+### 配置文件信息
+```properties
+spring.rabbitmq.host=localhost
+spring.rabbitmq.port=5672
+spring.rabbitmq.username=guest
+spring.rabbitmq.password=guest
+# 消费者每次从队列中获取的消息数量
+spring.rabbitmq.listener.simple.prefetch=1
+# 消费者自动启动
+spring.rabbitmq.listener.simple.auto-startup=true
+# 消费失败，自动重新入队
+spring.rabbitmq.listener.simple.default-requeue-rejected=true
+# 启用发送重试
+spring.rabbitmq.template.retry.enabled=true
+spring.rabbitmq.template.retry.initial-interval=1000
+spring.rabbitmq.template.retry.max-attempts=3
+spring.rabbitmq.template.retry.max-interval=10000
+spring.rabbitmq.template.retry.multiplier=1.0
+```
+
+### 配置服务信息
 以Ranout为例，其他具体配置请看代码
 ```java
 @Configuration
