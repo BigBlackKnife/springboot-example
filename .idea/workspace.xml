@@ -1,20 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f3043591-9bd4-4669-8adf-d307b54f578c" name="Default Changelist" comment="">
+    <list default="true" id="f3043591-9bd4-4669-8adf-d307b54f578c" name="Default Changelist" comment="redis demo提交 -- redis基本使用，redis缓存，redis集中管理sesion">
+      <change afterPath="$PROJECT_DIR$/spring-boot-rabbitmq/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-boot-rabbitmq/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-boot-rabbitmq/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-boot-rabbitmq/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-boot-rabbitmq/HELP.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-boot-rabbitmq/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-boot-rabbitmq/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-boot-rabbitmq/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-boot-rabbitmq/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-boot-rabbitmq/spring-boot-rabbitmq.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-boot-rabbitmq/src/main/java/com/blaife/rabbitmq/SpringBootRabbitmqApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-boot-rabbitmq/src/main/java/com/blaife/rabbitmq/config/RabbitConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-boot-rabbitmq/src/main/java/com/blaife/rabbitmq/model/Model.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-boot-rabbitmq/src/main/java/com/blaife/rabbitmq/receiver/RabbitReceiver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-boot-rabbitmq/src/main/java/com/blaife/rabbitmq/sender/RabbitSender.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-boot-rabbitmq/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-boot-rabbitmq/src/main/resources/img/AMQP.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-boot-rabbitmq/src/test/java/com/blaife/rabbitmq/RabbitTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-boot-rabbitmq/src/test/java/com/blaife/rabbitmq/SpringBootRabbitmqApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/speing-boot-redis/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speing-boot-redis/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speing-boot-redis/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speing-boot-redis/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speing-boot-redis/HELP.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speing-boot-redis/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speing-boot-redis/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speing-boot-redis/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speing-boot-redis/speing-boot-redis.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speing-boot-redis/src/main/java/com/blaife/redis/SpeingBootRedisApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speing-boot-redis/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speing-boot-redis/src/test/java/com/blaife/redis/SpeingBootRedisApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,96 +54,105 @@
   <component name="ProjectId" id="1WFyUHwphdE9HywmfOUaf2xoK11" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
-    <option name="showExcludedFiles" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
-    <option name="showMembers" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
-  <component name="RunManager" selected="JUnit.MailTest.testInlineResourceMail">
-    <configuration name="MailTest.testInlineResourceMail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="spring-boot-mail" />
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Example\spring-boot-examples\spring-boot-rabbitmq\src\main\resources\img" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.RabbitTest.headerTest">
+    <configuration name="RabbitTest.DirectTestOne" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring-boot-rabbitmq" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.blaife.mail.*" />
+          <option name="PATTERN" value="com.blaife.rabbitmq.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.blaife.mail" />
-      <option name="MAIN_CLASS_NAME" value="com.blaife.mail.MailTest" />
-      <option name="METHOD_NAME" value="testInlineResourceMail" />
+      <option name="PACKAGE_NAME" value="com.blaife.rabbitmq" />
+      <option name="MAIN_CLASS_NAME" value="com.blaife.rabbitmq.RabbitTest" />
+      <option name="METHOD_NAME" value="DirectTestOne" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MailTest.testSimpleMail (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="spring-boot-mail" />
+    <configuration name="RabbitTest.fanoutTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring-boot-rabbitmq" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.blaife.mail.*" />
+          <option name="PATTERN" value="com.blaife.rabbitmq.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.blaife.mail" />
-      <option name="MAIN_CLASS_NAME" value="com.blaife.mail.MailTest" />
-      <option name="METHOD_NAME" value="testSimpleMail" />
+      <option name="PACKAGE_NAME" value="com.blaife.rabbitmq" />
+      <option name="MAIN_CLASS_NAME" value="com.blaife.rabbitmq.RabbitTest" />
+      <option name="METHOD_NAME" value="fanoutTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MailTest.testSimpleMail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="spring-boot-mail" />
+    <configuration name="RabbitTest.headerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring-boot-rabbitmq" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.blaife.mail.utils.*" />
+          <option name="PATTERN" value="com.blaife.rabbitmq.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.blaife.mail.utils" />
-      <option name="MAIN_CLASS_NAME" value="com.blaife.mail.utils.MailTest" />
-      <option name="METHOD_NAME" value="testSimpleMail" />
+      <option name="PACKAGE_NAME" value="com.blaife.rabbitmq" />
+      <option name="MAIN_CLASS_NAME" value="com.blaife.rabbitmq.RabbitTest" />
+      <option name="METHOD_NAME" value="headerTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SpringBootMailApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="spring-boot-mail" />
+    <configuration name="RabbitTest.topicTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring-boot-rabbitmq" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.blaife.mail.utils.*" />
+          <option name="PATTERN" value="com.blaife.rabbitmq.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.blaife.mail" />
-      <option name="MAIN_CLASS_NAME" value="com.blaife.mail.SpringBootMailApplicationTests" />
-      <option name="METHOD_NAME" value="contextLoads" />
+      <option name="PACKAGE_NAME" value="com.blaife.rabbitmq" />
+      <option name="MAIN_CLASS_NAME" value="com.blaife.rabbitmq.RabbitTest" />
+      <option name="METHOD_NAME" value="topicTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SpringBootMailApplicationTests.testSimpleMail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="spring-boot-mail" />
+    <configuration name="RedisTest.testStringAccess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring-boot-redis" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.blaife.mail.MailTest" />
+          <option name="PATTERN" value="com.blaife.redis.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.blaife.mail" />
-      <option name="MAIN_CLASS_NAME" value="com.blaife.mail.SpringBootMailApplicationTests" />
-      <option name="METHOD_NAME" value="testSimpleMail" />
+      <option name="PACKAGE_NAME" value="com.blaife.redis" />
+      <option name="MAIN_CLASS_NAME" value="com.blaife.redis.RedisTest" />
+      <option name="METHOD_NAME" value="testStringAccess" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -140,6 +161,13 @@
     <configuration name="SpeingBootRedisApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="speing-boot-redis" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.blaife.redis.SpeingBootRedisApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBootLombokApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="spring-boot-lombok" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.blaife.lombok.SpringBootLombokApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -158,13 +186,34 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SpringBootRabbitmqApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="spring-boot-rabbitmq" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.blaife.rabbitmq.SpringBootRabbitmqApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBootRedisApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="spring-boot-redis" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.blaife.redis.SpringBootRedisApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBootSchedulerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="spring-boot-scheduler" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.blaife.scheduler.SpringBootSchedulerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.MailTest.testInlineResourceMail" />
-        <item itemvalue="JUnit.MailTest.testSimpleMail (1)" />
-        <item itemvalue="JUnit.MailTest.testSimpleMail" />
-        <item itemvalue="JUnit.SpringBootMailApplicationTests.contextLoads" />
-        <item itemvalue="JUnit.SpringBootMailApplicationTests.testSimpleMail" />
+        <item itemvalue="JUnit.RabbitTest.headerTest" />
+        <item itemvalue="JUnit.RabbitTest.topicTest" />
+        <item itemvalue="JUnit.RabbitTest.fanoutTest" />
+        <item itemvalue="JUnit.RabbitTest.DirectTestOne" />
+        <item itemvalue="JUnit.RedisTest.testStringAccess" />
       </list>
     </recent_temporary>
   </component>
@@ -190,7 +239,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1578759651976</updated>
-      <workItem from="1578759657905" duration="3288000" />
+      <workItem from="1578759657905" duration="3368000" />
+      <workItem from="1578801419776" duration="6370000" />
+      <workItem from="1579153357167" duration="18846000" />
     </task>
     <task id="LOCAL-00001" summary="完全修改项目结构，springboot案例重新开始">
       <created>1578760272158</created>
@@ -213,7 +264,42 @@
       <option name="project" value="LOCAL" />
       <updated>1578762914589</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="移除redis子模块">
+      <created>1578763005481</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1578763005481</updated>
+    </task>
+    <task id="LOCAL-00005" summary="加入redis子模块">
+      <created>1578814086361</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1578814086361</updated>
+    </task>
+    <task id="LOCAL-00006" summary="redis demo提交 -- redis基本使用，redis缓存，redis集中管理sesion">
+      <created>1578814173348</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1578814173348</updated>
+    </task>
+    <task id="LOCAL-00007" summary="springtask demo提交 -- 定时任务的基本操作">
+      <created>1578838503269</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1578838503269</updated>
+    </task>
+    <task id="LOCAL-00008" summary="加入scheduler子模块">
+      <created>1578838570021</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1578838570021</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -222,52 +308,107 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="完全修改项目结构，springboot案例重新开始" />
     <MESSAGE value="邮件demo提交" />
-    <option name="LAST_COMMIT_MESSAGE" value="邮件demo提交" />
+    <MESSAGE value="移除redis子模块" />
+    <MESSAGE value="加入redis子模块" />
+    <MESSAGE value="redis demo提交 -- redis基本使用，redis缓存，redis集中管理sesion" />
+    <MESSAGE value="springtask demo提交 -- 定时任务的基本操作" />
+    <MESSAGE value="加入scheduler子模块" />
+    <option name="LAST_COMMIT_MESSAGE" value="加入scheduler子模块" />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="71" key="#Project_Structure" timestamp="1578762415709">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="71" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1578762415709" />
+    <state x="574" y="114" key="#com.intellij.ide.util.MemberChooser" timestamp="1579184410597">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="574" y="114" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1579184410597" />
     <state x="363" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1578762151550">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="363" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1578762151550" />
-    <state x="184" y="6" key="CommitChangelistDialog2" timestamp="1578762912771">
+    <state x="184" y="6" key="CommitChangelistDialog2" timestamp="1579196746278">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="184" y="6" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1578762912771" />
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1578762842841">
+    <state x="2273" y="10" key="CommitChangelistDialog2/0.0.1536.824/1920.0.1536.824@1920.0.1536.824" timestamp="1578838568633" />
+    <state x="184" y="6" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1579196746278" />
+    <state x="2469" y="168" key="FileChooserDialogImpl" timestamp="1578813728313">
+      <screen x="1920" y="0" width="1536" height="824" />
+    </state>
+    <state x="2469" y="168" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1536.824@1920.0.1536.824" timestamp="1578813728313" />
+    <state width="1493" height="437" key="GridCell.Tab.0.bottom" timestamp="1579194190352">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1578762842841" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1578762842840">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1536.824@1920.0.1536.824" timestamp="1578838283963" />
+    <state width="1493" height="437" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1579194190352" />
+    <state width="1493" height="437" key="GridCell.Tab.0.center" timestamp="1579194190352">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1578762842840" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1578762842840">
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1536.824@1920.0.1536.824" timestamp="1578838283962" />
+    <state width="1493" height="437" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1579194190352" />
+    <state width="1493" height="437" key="GridCell.Tab.0.left" timestamp="1579194190352">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1578762842840" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1578762842841">
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1536.824@1920.0.1536.824" timestamp="1578838283962" />
+    <state width="1493" height="437" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1579194190352" />
+    <state width="1493" height="437" key="GridCell.Tab.0.right" timestamp="1579194190352">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1578762842841" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1536.824@1920.0.1536.824" timestamp="1578838283962" />
+    <state width="1493" height="437" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1579194190352" />
+    <state width="1493" height="264" key="GridCell.Tab.1.bottom" timestamp="1579188084168">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.1.bottom/0.0.1536.824/1920.0.1536.824@1920.0.1536.824" timestamp="1578838283963" />
+    <state width="1493" height="264" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1579188084168" />
+    <state width="1493" height="264" key="GridCell.Tab.1.center" timestamp="1579188084168">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.1.center/0.0.1536.824/1920.0.1536.824@1920.0.1536.824" timestamp="1578838283963" />
+    <state width="1493" height="264" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1579188084168" />
+    <state width="1493" height="264" key="GridCell.Tab.1.left" timestamp="1579188084168">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.1.left/0.0.1536.824/1920.0.1536.824@1920.0.1536.824" timestamp="1578838283963" />
+    <state width="1493" height="264" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1579188084168" />
+    <state width="1493" height="264" key="GridCell.Tab.1.right" timestamp="1579188084168">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.1.right/0.0.1536.824/1920.0.1536.824@1920.0.1536.824" timestamp="1578838283963" />
+    <state width="1493" height="264" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1579188084168" />
     <state x="480" y="123" key="RollbackChangesDialog" timestamp="1578762462334">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="480" y="123" key="RollbackChangesDialog/0.0.1536.824@0.0.1536.824" timestamp="1578762462334" />
-    <state x="361" y="146" key="Vcs.Push.Dialog.v2" timestamp="1578762919760">
+    <state x="2281" y="146" key="Vcs.Push.Dialog.v2" timestamp="1578838576518">
+      <screen x="1920" y="0" width="1536" height="824" />
+    </state>
+    <state x="2281" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.1536.824@1920.0.1536.824" timestamp="1578838576518" />
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1578763024363" />
+    <state x="449" y="237" key="com.intellij.ide.util.TipDialog" timestamp="1578801420899">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1578762919760" />
-    <state x="449" y="237" key="com.intellij.ide.util.TipDialog" timestamp="1578759658395">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
+    <state x="449" y="237" key="com.intellij.ide.util.TipDialog/0.0.1536.824/1920.0.1536.824@0.0.1536.824" timestamp="1578801420899" />
     <state x="449" y="237" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1578759658395" />
-    <state x="178" y="114" key="new project wizard" timestamp="1578760148389">
+    <state x="355" y="28" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1579184378603">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="355" y="28" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.824@0.0.1536.824" timestamp="1579184378603" />
+    <state x="2098" y="114" key="new project wizard" timestamp="1578838705079">
+      <screen x="1920" y="0" width="1536" height="824" />
+    </state>
+    <state x="178" y="114" key="new project wizard/0.0.1536.824/1920.0.1536.824@0.0.1536.824" timestamp="1578811657586" />
+    <state x="2098" y="114" key="new project wizard/0.0.1536.824/1920.0.1536.824@1920.0.1536.824" timestamp="1578838705079" />
     <state x="178" y="114" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1578760148389" />
+    <state x="425" y="187" key="run.anything.popup" timestamp="1579186644968">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1579186644968" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1579188794322">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="2351" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/1920.0.1536.824@1920.0.1536.824" timestamp="1579176464043" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1579188794322" />
   </component>
 </project>
