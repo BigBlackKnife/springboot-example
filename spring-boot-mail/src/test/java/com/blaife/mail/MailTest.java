@@ -1,5 +1,6 @@
 package com.blaife.mail;
 
+import com.blaife.mail.utils.MailUtil;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +12,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 public class MailTest {
 
     @Autowired
-    private com.blaife.mail.utils.MailTest mail;
+    private MailUtil mail;
 
     /**
      * 测试简单邮件

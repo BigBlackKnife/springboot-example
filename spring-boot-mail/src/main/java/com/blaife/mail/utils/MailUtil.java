@@ -17,14 +17,14 @@ import javax.mail.internet.MimeMessage;
 import java.io.File;
 
 @Component
-public class MailTest {
+public class MailUtil {
 
     @Value("${spring.mail.username}")
     private String sender;
 
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
-    // 邮件方法发送时的类，在引入springbootmail以来后生成
+    // 邮件方法发送时的类，在引入springbootmail后生成
     @Autowired
     private JavaMailSender mailSender;
 
@@ -33,7 +33,7 @@ public class MailTest {
     private TemplateEngine templateEngine;
 
     @Autowired
-    private MailTest mail;
+    private MailUtil mail;
 
     /**
      * 发送简单邮件(文本邮件)
@@ -106,7 +106,7 @@ public class MailTest {
     }
 
     /**
-     * 测试带附件的邮件发送
+     * 发送含有静态资源的邮件（图片）
      * @param to 接收人
      * @param subject 主题
      * @param content 内容
