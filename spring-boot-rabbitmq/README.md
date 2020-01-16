@@ -5,7 +5,7 @@
 > RabbitMQ是实现了高级消息队列协议（AMQP）的开源消息代理软件（亦称面向消息的中间件）。RabbitMQ服务器是用Erlang语言编写的，而集群和故障转移是构建在开放电信平台框架上的。所有主要的编程语言均有与代理接口通讯的客户端库。-- 百度百科
 
 ### AMQP
-![AMQP](src/main/resources/img/AMQP.png)
+![AMQP](https://github.com/BigBlackKnife/spring-boot-examples/tree/master/spring-boot-rabbitmq/src/main/resources/img/AMQP.png)
 - 大体分为3部分 Producer (消息生产者)、 Consumner (消息消费者)、 Broker (服务端)。
 - Broker中包含有完整的Virtual Host (虚拟主机)、 Exchange(交换机)、 Queue（队列)。
 - 一个Broker可以创建多个Virtual Host，注意，如果AMQP是由多个Broker构成的集群提供服务， 那么一个Virtual Host也可以由多个Broker共同构成。
