@@ -50,11 +50,12 @@ public class SchedulerTask {
 3. fixedDelay：启动结束后下次启动时间间隔
 4. initialDelay：fixedRate|fixedDelay第一次执行前延迟的毫秒数
 
-请注意fixedRate和fixedDelay参数的区别，一个在方法开始执行时计时，一个在方法执行结束后计时（一个方法的执行也需要时间）。
+***请注意fixedRate和fixedDelay参数的区别，一个在方法开始执行时计时，一个在方法执行结束后计时（一个方法的执行也需要时间）。***
 
 ### cron表达式详解
 字符顺序为：second(秒)， minute(分)， hour(时),day of month(日),month(月),day of week(周几)  
 字段可取值如下表格：
+
 |字段            |允许值                    |允许的特殊符号   |
 |:---------------|:-----------------------:|:---------------|
 |秒              |0-59                     |,-*/            |
@@ -65,6 +66,7 @@ public class SchedulerTask {
 |星期            |0-7或SUN-SAT 0 7是SUN     |,-*?/LC#        |
 
 特殊符号释义：
+
 |符号             |释义                           |
 |:---------------:|:------------------------------|
 |`,`              |枚举                           |
