@@ -38,5 +38,4 @@ public class SchedulerTask {
     public void reportCurrentTime() {
         System.out.println("现在时间：" + LocalDateTime.now());
     }
-
 }
