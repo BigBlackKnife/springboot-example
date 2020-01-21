@@ -92,6 +92,7 @@ public class RedisConfig {
 
 ## redis工具类
 工具了内容详见[RedisUtil](https://github.com/BigBlackKnife/spring-boot-examples/blob/master/spring-boot-redis/src/main/java/com/blaife/redis/utils/RedisUtil.java)
+
 工具类中包含了对String、Hash、Set、List以及公共部分（如指定缓存失效时间等）的操作方法。
 
 ## 测试类
