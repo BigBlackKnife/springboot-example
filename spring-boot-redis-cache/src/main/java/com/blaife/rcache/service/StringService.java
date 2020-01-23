@@ -1,8 +1,8 @@
 package com.blaife.rcache.service;
 
+import com.blaife.rcache.annotation.MyCache;
 import org.springframework.cache.annotation.*;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -27,10 +27,7 @@ public class StringService {
      * @param datas
      * @return
      */
-    @Caching(put = {
-            @CachePut(key = "#datas.get(0)"),
-            @CachePut(key = "#datas.get(1)")
-    })
+    @MyCache
     public List<String> testPuts(List<String> datas) {
         return datas;
     }

@@ -1,7 +1,5 @@
 package com.blaife.rcache.config;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.cache.annotation.CachingConfigurerSupport;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.cache.interceptor.KeyGenerator;
@@ -20,8 +18,6 @@ import java.time.Duration;
 @EnableCaching
 public class RedisConfiguration extends CachingConfigurerSupport {
 
-    private static final Logger logger = LoggerFactory.getLogger(RedisConfiguration.class);
-
     /**
      * 设置 redis 数据默认过期时间
      * 设置 Cache 序列化方式
@@ -33,7 +29,7 @@ public class RedisConfiguration extends CachingConfigurerSupport {
         RedisCacheConfiguration configuration = RedisCacheConfiguration.defaultCacheConfig();
         configuration = configuration
                 .serializeValuesWith(RedisSerializationContext.SerializationPair.fromSerializer(fastJsonRedisSerializer))
-                .entryTtl(Duration.ofSeconds(60));
+                .entryTtl(Duration.ofSeconds(3000));
         return configuration;
     }
 
