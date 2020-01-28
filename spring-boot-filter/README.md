@@ -46,7 +46,7 @@ public class TestFilter implements Filter {
         System.out.println("我是testFilter过滤器的执行方法，客户端向Servlet发送的请求被我拦截到了");
         System.out.println(((HttpServletRequest)servletRequest).getRequestURI()); // 方法路径 如：/testFilter
         System.out.println(((HttpServletRequest)servletRequest).getRequestURL()); // 绝对路径 如：http://localhost:8080/testFilter
-        filterChain.doFilter(servletRequest, servletResponse); // 此方法是离开过滤器继续执行
+        filterChain.doFilter(servletRequest, servletResponse); // 此方法是过滤器验证完成继续执行
         System.out.println("我是testFilter过滤器的执行方法，Servlet向客户端发送的响应被我拦截到了");
     }
 
@@ -62,7 +62,7 @@ public class TestFilter implements Filter {
 简单的说一下操作流程就是，自定义过滤器名称，实现Filter接口，重写方法（重点是doFilter方法）。添加注解@WebFilter。这样一个过滤器就完成了。
 
 ## @Order
-细心的朋友应该发现了，@Order注解不可用，添加之后没有效果，查询结果显示：因为@WebFilter本身是没有Order属性，所以构建的Filter将是默认的Order值
+细心的朋友应该发现了，@Order注解不可用，添加之后没有效果，查询结果显示：因为@WebFilter本身是没有Order属性，所以构建的Filter将是默认的Order值。  
 那么，@Order注解有什么用？ （@Order注解主要用来控制配置类的加载顺序）
 
 下面使用FilterRegistrationBean方式来实现自定义过滤器顺序。

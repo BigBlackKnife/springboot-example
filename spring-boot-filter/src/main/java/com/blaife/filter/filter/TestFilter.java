@@ -18,7 +18,7 @@ import java.io.IOException;
 
 // urlPatterns：拦截路径
 // filterName：过滤器名称
-// initParams：初始化内容 初始化url为http://localhost:8080
+// initParams：初始化内容 初始化url为http://localhost:8080/blaife/test/testFilter
 @WebFilter(urlPatterns = "/test/*", filterName = "testFilter", initParams = {
         @WebInitParam(name = "URL", value = "http://localhost:8080/blaife/test/testFilter")})
 public class TestFilter implements Filter {
@@ -49,7 +49,7 @@ public class TestFilter implements Filter {
         System.out.println("我是testFilter过滤器的执行方法，客户端向Servlet发送的请求被我拦截到了");
         System.out.println(((HttpServletRequest)servletRequest).getRequestURI()); // 方法路径 如：/testFilter
         System.out.println(((HttpServletRequest)servletRequest).getRequestURL()); // 绝对路径 如：http://localhost:8080/testFilter
-        filterChain.doFilter(servletRequest, servletResponse); // 此方法是离开过滤器继续执行
+        filterChain.doFilter(servletRequest, servletResponse); // 此方法是过滤器验证完成继续执行
         System.out.println("我是testFilter过滤器的执行方法，Servlet向客户端发送的响应被我拦截到了");
     }
 
