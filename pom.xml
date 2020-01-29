@@ -22,6 +22,7 @@
         <module>spring-boot-scheduler</module>
         <module>spring-boot-rabbitmq</module>
         <module>spring-boot-filter</module>
+        <module>spring-boot-interceptor</module>
     </modules>
 
     <build>
