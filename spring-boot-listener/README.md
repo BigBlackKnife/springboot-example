@@ -40,9 +40,9 @@ import javax.servlet.ServletContext;
  * 使用 ApplicationListener<ContextRefreshedEvent> 实现系统启动时加载初始化信息
  */
 @Component
-public class MyServletContextListener implements ApplicationListener<ContextRefreshedEvent> {
+public class MyServletContextRefreshedListener implements ApplicationListener<ContextRefreshedEvent> {
 
-    private static final Logger logger = LoggerFactory.getLogger(MyServletContextListener.class);
+    private static final Logger logger = LoggerFactory.getLogger(MyServletContextRefreshedListener.class);
 
     @Autowired
     UserService userService;
@@ -63,7 +63,35 @@ public class MyServletContextListener implements ApplicationListener<ContextRefr
 此方法在项目初始化启动时触发，将查询到的信息放在application域中。 在项目启动时就可以看到输出的信息了。  
 此类上的注解需要使用@Component而不是@WebListener,尝试使用@WebListener会启动报错，内置tomcat启动错误。
 
-## 2.HttpSessionListener监听在线人数
+## 2.ServletContextListener项目启动和关闭事件监听
+```java
+package com.blaife.listener.listener;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import javax.servlet.ServletContextEvent;
+import javax.servlet.ServletContextListener;
+import javax.servlet.annotation.WebListener;
+
+@WebListener
+public class MyServletContextListener implements ServletContextListener {
+
+    private static final Logger logger = LoggerFactory.getLogger(MyServletContextListener.class);
+
+    @Override
+    public void contextInitialized(ServletContextEvent sce) {
+        logger.info("项目启动，执行初始化操作");
+    }
+
+    @Override
+    public void contextDestroyed(ServletContextEvent sce) {
+        logger.info("项目关闭，执行数据备份操作");
+    }
+}
+```
+
+## 3.HttpSessionListener监听在线人数
 ```java
 package com.blaife.listener.listener;
 
@@ -140,7 +168,7 @@ public class TestController {
 此监听器监听的是session会话，并非session对象。测试时打开两个浏览器，分别执行addSessionBlaife，会看到当前登录人数添加。
 分别执行sessionInvaildate，会看到当前登陆人数减少。
 
-## 3.HttpSessionAttributeListener监听session属性变化
+## 4.HttpSessionAttributeListener监听session属性变化
 ```java
 package com.blaife.listener.listener;
 
@@ -217,7 +245,7 @@ public class TestController {
 ```
 第一次执行addSessionBlaife方法会输出session创建，第二次执行会提示session修改，执行removeSessionBlaife提示session移除。
 
-## 4.ServletRequestListener监听客户端请求Servlet Request对象
+## 5.ServletRequestListener监听客户端请求Servlet Request对象
 ```java
 package com.blaife.listener.listener;
 
@@ -252,7 +280,7 @@ public class MyServletRequestListener implements ServletRequestListener {
 ```
 监听任何客户端请求，分别是请求初始化和请求销毁。用户获取用户的访问信息。
 
-## 5.自定义监听器
+## 6.自定义监听器
 我们使用ApplicationListener接口，他需要一个event对象。首先来写一下我们的event对象。  
 ```java
 package com.blaife.listener.event;
