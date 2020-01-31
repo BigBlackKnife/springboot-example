@@ -23,6 +23,7 @@
         <module>spring-boot-rabbitmq</module>
         <module>spring-boot-filter</module>
         <module>spring-boot-interceptor</module>
+        <module>spring-boot-listener</module>
     </modules>
 
     <build>
