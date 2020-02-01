@@ -72,6 +72,7 @@ public class Swagger2Config {
     }
 }
 ```
+配置文件完成之后，我们就可以访问http://localhost:8080/swagger-ui.html进行测试了。
 
 ## 编写实体类
 ```java
@@ -153,6 +154,8 @@ public class TestController {
 ```
 
 接口一共为3个，getString为没有参数的方法，showUser为有基本类型参数的方法，getUser为有实体类参数的方法（配合User实体类）。
+编码完成后案例图![案例图](https://raw.githubusercontent.com/BigBlackKnife/spring-boot-examples/master/spring-boot-swagger2/src/main/resources/static/img/swagger%E6%A1%88%E4%BE%8B%E5%9B%BE.png)
+可以点击 `Try it out` 进行测试
 
 ## Swagger注解
 
