@@ -26,6 +26,7 @@
         <module>spring-boot-listener</module>
         <module>spring-boot-swagger2</module>
         <module>spring-boot-mybatis-plus</module>
+        <module>spring-boot-mybatis-plus-dynamic-datasource</module>
     </modules>
 
     <build>
