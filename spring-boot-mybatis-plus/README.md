@@ -361,3 +361,114 @@ public class UsersXmlController {
 
 }
 ```
+
+### 4.分页插件
+#### 装配分页插件
+```java
+package com.blaife.config;
+
+import com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor;
+import com.baomidou.mybatisplus.extension.plugins.pagination.optimize.JsqlParserCountOptimize;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
+
+@EnableTransactionManagement
+@Configuration
+public class MybatisPlusConfig {
+
+    @Bean
+    public PaginationInterceptor paginationInterceptor() {
+        PaginationInterceptor paginationInterceptor = new PaginationInterceptor();
+        // 设置请求的页面大于最大页后操作， true调回到首页，false 继续请求  默认false
+        // paginationInterceptor.setOverflow(false);
+        // 设置最大单页限制数量，默认 500 条，-1 不受限制
+        // paginationInterceptor.setLimit(500);
+        // 开启 count 的 join 优化,只针对部分 left join
+        // paginationInterceptor.setCountSqlParser(new JsqlParserCountOptimize(true));
+        return paginationInterceptor;
+    }
+
+}
+```
+#### Mapper层
+```java
+package com.blaife.mapper;
+
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.blaife.model.Users;
+
+import java.util.List;
+
+public interface UsersXmlMapper {
+
+    /**
+     * 分页查询用户列表
+     * @param page
+     * @return
+     */
+    IPage<Users> selectPageUses(Page<?> page);
+
+}
+```
+请注意这里接收时使用IPage<XXXX>,使用常规List接收则不会出现页数，总条数等信息.
+
+#### mapper.xml文件
+```xml
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.blaife.mapper.UsersXmlMapper" >
+
+    <resultMap id="userMap" type="com.blaife.model.Users"></resultMap>
+
+    <select id="selectPageUses" resultMap="userMap">
+        SELECT * FROM users
+    </select>
+
+</mapper>
+```
+与普通的写法没有差别。
+
+#### Service层
+```java
+@Service
+public class UsersXmlServiceImpl implements UsersXmlService {
+
+    @Autowired
+    @SuppressWarnings(value = "all")
+    UsersXmlMapper users;
+
+    @Override
+    public IPage<Users> selectPageUses() {
+        Page p = new Page();
+        p.setSize(2);
+        p.setCurrent(1);
+        return users.selectPageUses(p);
+    }
+}
+```
+这里把page信息写死了，实际使用时自然要动态去处理。  
+page中的两个主要参数，每页记录数及当前页。当然还有其他的参数，比如排序规则等信息，在此不赘述了。
+
+Controller层就不写了，输出的信息为
+```json
+{
+	"records": [{
+		"id": "1ae3b7d8ea6c4397b4d4fa000816859c",
+		"name": "Multiterm One",
+		"age": 1
+	}, {
+		"id": "46c1d9ada64440a1951fbd60b107e9e3",
+		"name": "Multiterm One",
+		"age": 1
+	}],
+	"total": 5,
+	"size": 2,
+	"current": 1,
+	"orders": [],
+	"searchCount": true,
+	"pages": 3
+}
+```

@@ -3,11 +3,17 @@
 
 <mapper namespace="com.blaife.mapper.UsersXmlMapper" >
 
+    <resultMap id="userMap" type="com.blaife.model.Users"></resultMap>
+
     <insert id="insertUserMultiterm" parameterType="java.util.List">
         INSERT INTO users (id, `name`, age) VALUES
         <foreach collection="list" item="item" separator="," close=";">
             (#{item.id}, #{item.name}, #{item.age})
         </foreach>
     </insert>
+
+    <select id="selectPageUses" resultMap="userMap">
+        SELECT * FROM users
+    </select>
 
 </mapper>

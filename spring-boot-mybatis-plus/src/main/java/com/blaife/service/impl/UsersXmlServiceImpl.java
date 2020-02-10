@@ -1,5 +1,7 @@
 package com.blaife.service.impl;
 
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.blaife.mapper.UsersXmlMapper;
 import com.blaife.model.Users;
 import com.blaife.service.UsersXmlService;
@@ -31,5 +33,13 @@ public class UsersXmlServiceImpl implements UsersXmlService {
         u2.setAge(2);
         list.add(u2);
         return users.insertUserMultiterm(list);
+    }
+
+    @Override
+    public IPage<Users> selectPageUses() {
+        Page p = new Page();
+        p.setSize(2);
+        p.setCurrent(1);
+        return users.selectPageUses(p);
     }
 }
