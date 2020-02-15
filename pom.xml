@@ -19,6 +19,7 @@
         <module>spring-boot-mail</module>
         <module>spring-boot-redis</module>
         <module>spring-boot-redis-cache</module>
+        <module>spring-boot-redis-session</module>
         <module>spring-boot-scheduler</module>
         <module>spring-boot-rabbitmq</module>
         <module>spring-boot-filter</module>
