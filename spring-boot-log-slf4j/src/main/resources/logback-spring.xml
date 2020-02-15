@@ -77,7 +77,7 @@
 　　　　　开发环境：
 　　　　　　　类中引入了logger日志对象时，level级别用info,debug都可以，都有错误信息输出。
 　　 -->
-    <!-- hibernate logger -->
+    <!-- blaife logger -->
     <logger name="com.blaife" level="trace" />
     <!-- Spring framework logger -->
     <logger name="org.springframework" level="debug" additivity="false" />
