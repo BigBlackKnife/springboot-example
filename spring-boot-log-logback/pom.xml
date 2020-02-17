@@ -11,7 +11,7 @@
     <groupId>com.blaife</groupId>
     <artifactId>spring-boot-log-logback</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>spring-boot-log-slf4j</name>
+    <name>spring-boot-log-logback</name>
     <description>Demo project for Spring Boot Logback</description>
 
     <properties>
