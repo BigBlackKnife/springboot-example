@@ -1,5 +1,6 @@
 # SpringBoot - log - (slf4j+logback)
-SpringBoot 底层也是使用了 slf4j 和 logback的方式进行日志记录，SpringBoot 也把其他的日志都替换成了slf4j。
+SLF4J，即简单日志门面（Simple Logging Facade for Java），它不是一个真正的日志实现，而是一个抽象层（ abstraction layer），
+它允许你在后台使用任意一个日志实现。 SpringBoot 底层默认使用 logback日志 进行日志记录。
 
 ## 基本使用
 ```java
