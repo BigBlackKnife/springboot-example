@@ -1,6 +1,34 @@
 # SpringBoot - log - (slf4j+logback)
 SpringBoot 底层也是使用了 slf4j 和 logback的方式进行日志记录，SpringBoot 也把其他的日志都替换成了slf4j。
 
+## 基本使用
+```java
+package com.blaife;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
+
+@SpringBootTest
+@RunWith(SpringRunner.class)
+public class LogTest {
+    // 创建日志对象
+    private Logger log = LoggerFactory.getLogger(LogTest.class);
+    @Test
+    public void outputLog() {
+        log.trace("这是 trace");
+        log.debug("这是 debug");
+        log.info("这是 info");
+        log.warn("这是 warn");
+        log.error("这是 error");
+    }
+}
+
+```
+
 ## application.properties文件数据配置
 ```properties
 # 设置日志配置文件（注意：日志配置文件中的设置会覆盖掉application。properties中的设置）
