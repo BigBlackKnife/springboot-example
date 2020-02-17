@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.blaife</groupId>
-    <artifactId>spring-boot-log-slf4j</artifactId>
+    <artifactId>spring-boot-log-logback</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>spring-boot-log-slf4j</name>
-    <description>Demo project for Spring Boot Slf4j</description>
+    <description>Demo project for Spring Boot Logback</description>
 
     <properties>
         <java.version>1.8</java.version>
