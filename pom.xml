@@ -28,7 +28,8 @@
         <module>spring-boot-swagger2</module>
         <module>spring-boot-mybatis-plus</module>
         <module>spring-boot-mybatis-plus-dynamic-datasource</module>
-        <module>spring-boot-log-slf4j</module>
+        <module>spring-boot-log-log4j2</module>
+        <module>spring-boot-log-logback</module>
     </modules>
 
     <build>
