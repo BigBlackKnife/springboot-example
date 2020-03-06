@@ -30,6 +30,8 @@
         <module>spring-boot-mybatis-plus-dynamic-datasource</module>
         <module>spring-boot-log-log4j2</module>
         <module>spring-boot-log-logback</module>
+        <module>spring-boot-lombok</module>
+        <module>spring-boot-i18n</module>
     </modules>
 
     <build>
