@@ -256,6 +256,7 @@ public class ToString07_Exclude {
 - 此注解不能配合exclude和of一起使用
 
 #### 2.8 @ToString.Include
+在属性和方法上使用，指定包含该属性和方法。
 ```java
 @ToString
 public class ToString08_Include {
@@ -290,22 +291,83 @@ public class ToString08_Include {
 }
 ```
 - toString方法默认是包含属性的，所以在属性上使用时配合onlyExplicitlyIncluded才有意义。
-- toString方法默认是不包含方法的，在方法上使用时toString方法内部调用方法实现。
+- toString方法默认是不包含方法的，在方法上使用时编译后的toString方法内部调用指定方法进行实现。
 
-## 3.@EqualsAndHashcode
-## 4.@AllArgsContructor
-## 5.@NoArgsContructor
-## 6.@RequiredArgsContructor
-## 7.@Data
-## 8.@value
-## 9.@Builder
-## 10.@Singular
-## 11.@Accessors
-## 12.@Wither
-## 13.@NonNull
-## 14.@Log
-## 15.@ClearUp
-## 16.@Synchronized
-## 17.@SneakyThrows
-## 18.@Delegate
-## 19.var/val
+### 3.@AllArgsConstructor 生成全属性构造方法
+作用于类上，生成包含所有非static修饰的属性的构造方法
+
+#### 3.1 `staticName`
+私有化构造方法，并生成一个以staticName的值命名的静态工厂函数.
+```java
+@AllArgsConstructor(staticName = "with")
+public class AllArgsConstructor01_StaticName {
+    private static String attribute1;
+    private final String attribute2;
+    private String attribute3;
+}
+
+```
+编译后结果为：
+```java
+public class AllArgsConstructor01_StaticName {
+    private static String attribute1;
+    private final String attribute2;
+    private String attribute3;
+
+    private AllArgsConstructor01_StaticName(final String attribute2, final String attribute3) {
+        this.attribute2 = attribute2;
+        this.attribute3 = attribute3;
+    }
+
+    public static AllArgsConstructor01_StaticName with(final String attribute2, final String attribute3) {
+        return new AllArgsConstructor01_StaticName(attribute2, attribute3);
+    }
+}
+```
+
+#### 3.2 `access`
+指定生成的构造方法的访问级别，默认为public。和staticName同时使用也可以指定静态工厂函数的访问级别。
+```java
+@AllArgsConstructor(access = AccessLevel.PROTECTED, staticName = "with")
+public class AllArgsConstructor02_Access {
+    private static String attribute1;
+    private final String attribute2;
+    private String attribute3;
+}
+```
+编译后结果为：
+```java
+public class AllArgsConstructor02_Access {
+    private static String attribute1;
+    private final String attribute2;
+    private String attribute3;
+
+    private AllArgsConstructor02_Access(final String attribute2, final String attribute3) {
+        this.attribute2 = attribute2;
+        this.attribute3 = attribute3;
+    }
+
+    protected static AllArgsConstructor02_Access with(final String attribute2, final String attribute3) {
+        return new AllArgsConstructor02_Access(attribute2, attribute3);
+    }
+}
+```
+- 和staticName同时使用时指定的时static方法的修饰符，而非构造方法的修饰符
+
+### 4.@NoArgsContructor 生成无参构造方法
+### 5.@RequiredArgsContructor 用@NonNull修饰的参数和用final修饰且未初始化的参数才会加入构造方法
+### 6.@EqualsAndHashcode 生成equals和hashCode方法
+### 7.@Data 等价于@Getter+@Setter+@ToString+@EqualsAndHashCode+@RequiredArgsConstructor
+### 8.@value 会给所有属性加上final修饰并生成get方法、toString方法和@EqualsAndHashCode注解生成的代码。
+### 9.@Builder 生成的代码为建造者模式（Builder Pattern）
+### 9.1 @Singular 配合@Builder使用
+### 10.@Accessors 配合@Setter注解使用，可生成链式的set方法
+
+## 其他注解
+### 11.@NonNull 触发空值检查
+### 12.@Log 作用于类上, 生成log注解
+### 13.@CleanUp 作用于本地变量，可以完成资源的释放
+### 14.@Synchronized 给方法体加锁
+### 15.@SneakyThrows 偷偷抛出Checked Exception
+### 16.@Delegate 实现代理模式
+### 17.var/val 表示变量
