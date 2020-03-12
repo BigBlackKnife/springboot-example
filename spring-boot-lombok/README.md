@@ -354,10 +354,84 @@ public class AllArgsConstructor02_Access {
 ```
 - 和staticName同时使用时指定的时static方法的修饰符，而非构造方法的修饰符
 
-### 4.@NoArgsContructor 生成无参构造方法
-### 5.@RequiredArgsContructor 用@NonNull修饰的参数和用final修饰且未初始化的参数才会加入构造方法
-### 6.@EqualsAndHashcode 生成equals和hashCode方法
-### 7.@Data 等价于@Getter+@Setter+@ToString+@EqualsAndHashCode+@RequiredArgsConstructor
+### 4.@NoArgsConstructor 生成无参构造方法
+作用于类上，会生成没有参数的构造方法。
+
+#### 4.1 `force`
+如果存在用final修饰的成员变量且未初始化，则需使用@NoArgsConstructor(force=true)，所有的final属性都会被初始化为0、false、null等。
+若成员变量使用了@NonNull，那么该注解将不起作用。
+```java
+@NoArgsConstructor(force = true)
+public class NoArgsConstructor01_Force {
+    private static String attribute1;
+    private final String attribute2;
+    private String attribute3;
+}
+```
+编译后结果为：
+```java
+public class NoArgsConstructor01_Force {
+    private static String attribute1;
+    private final String attribute2 = null;
+    private String attribute3;
+
+    public NoArgsConstructor01_Force() {
+    }
+}
+```
+- 如果存在final修饰的成员变量且未初始化，不使用force会提示 `not have been initialized` ;
+
+#### 4.2 `staticName`
+参照@AllArgsConstructor注解
+
+#### 4.3 `access`
+参照@AllArgsConstructor注解
+
+### 5.@RequiredArgsContructor 指向性加入构造方法
+用@NonNull修饰的参数和用final修饰且未初始化的参数才会加入构造方法。
+
+#### 5.1 基本使用
+```java
+@RequiredArgsConstructor
+public class RequiredArgsConstructor01_Basics {
+    private static String attribute1;
+    private final String attribute2;
+    @NonNull
+    private String attribute3;
+}
+```
+编译后结果为：
+```java
+public class RequiredArgsConstructor01_Basics {
+    private static String attribute1;
+    private final String attribute2;
+    @NonNull
+    private String attribute3;
+
+    public RequiredArgsConstructor01_Basics(final String attribute2, @NonNull final String attribute3) {
+        if (attribute3 == null) {
+            throw new NullPointerException("attribute3 is marked non-null but is null");
+        } else {
+            this.attribute2 = attribute2;
+            this.attribute3 = attribute3;
+        }
+    }
+}
+```
+
+#### 5.2 `staticName`
+参照@AllArgsConstructor注解
+
+#### 5.3 `access`
+参照@AllArgsConstructor注解
+
+### 6.@Data 等价于@Getter+@Setter+@ToString+@EqualsAndHashCode+@RequiredArgsConstructor
+当有属性使用@NonNull或者final修饰时，生成的代码中没有公共的无参构造方法，有私有的无参构造方法，
+相当于上面的一串注解再加上@NoArgsConstructor(access=AccessLevel.PRIVATE)注解
+
+
+
+### 7.@EqualsAndHashcode 生成equals和hashCode方法
 ### 8.@value 会给所有属性加上final修饰并生成get方法、toString方法和@EqualsAndHashCode注解生成的代码。
 ### 9.@Builder 生成的代码为建造者模式（Builder Pattern）
 ### 9.1 @Singular 配合@Builder使用
