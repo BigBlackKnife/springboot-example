@@ -425,13 +425,265 @@ public class RequiredArgsConstructor01_Basics {
 #### 5.3 `access`
 参照@AllArgsConstructor注解
 
-### 6.@Data 等价于@Getter+@Setter+@ToString+@EqualsAndHashCode+@RequiredArgsConstructor
+### 6.@EqualsAndHashcode 生成equals和hashCode方法
+
+#### 6.1 基本使用
+```java
+@EqualsAndHashCode
+public class EqualsAndHashCode01_Basics {
+    private String attribute1;
+    private String attribute2;
+    private String attribute3;
+}
+```
+编译后结果为：
+```java
+public class EqualsAndHashCode01_Basics {
+    private String attribute1;
+    private String attribute2;
+    private String attribute3;
+
+    public EqualsAndHashCode01_Basics() {
+    }
+
+    public boolean equals(final Object o) {
+        if (o == this) {
+            return true;
+        } else if (!(o instanceof EqualsAndHashCode01_Basics)) {
+            return false;
+        } else {
+            EqualsAndHashCode01_Basics other = (EqualsAndHashCode01_Basics)o;
+            if (!other.canEqual(this)) {
+                return false;
+            } else {
+                label47: {
+                    Object this$attribute1 = this.attribute1;
+                    Object other$attribute1 = other.attribute1;
+                    if (this$attribute1 == null) {
+                        if (other$attribute1 == null) {
+                            break label47;
+                        }
+                    } else if (this$attribute1.equals(other$attribute1)) {
+                        break label47;
+                    }
+
+                    return false;
+                }
+
+                Object this$attribute2 = this.attribute2;
+                Object other$attribute2 = other.attribute2;
+                if (this$attribute2 == null) {
+                    if (other$attribute2 != null) {
+                        return false;
+                    }
+                } else if (!this$attribute2.equals(other$attribute2)) {
+                    return false;
+                }
+
+                Object this$attribute3 = this.attribute3;
+                Object other$attribute3 = other.attribute3;
+                if (this$attribute3 == null) {
+                    if (other$attribute3 != null) {
+                        return false;
+                    }
+                } else if (!this$attribute3.equals(other$attribute3)) {
+                    return false;
+                }
+
+                return true;
+            }
+        }
+    }
+
+    protected boolean canEqual(final Object other) {
+        return other instanceof EqualsAndHashCode01_Basics;
+    }
+
+    public int hashCode() {
+        int PRIME = true;
+        int result = 1;
+        Object $attribute1 = this.attribute1;
+        int result = result * 59 + ($attribute1 == null ? 43 : $attribute1.hashCode());
+        Object $attribute2 = this.attribute2;
+        result = result * 59 + ($attribute2 == null ? 43 : $attribute2.hashCode());
+        Object $attribute3 = this.attribute3;
+        result = result * 59 + ($attribute3 == null ? 43 : $attribute3.hashCode());
+        return result;
+    }
+}
+```
+
+#### 6.2 `exclude`
+参照@ToString注解
+
+#### 6.3 `of`
+参照@ToString注解
+
+
+### 7.@Data 等价于@Getter+@Setter+@ToString+@EqualsAndHashCode+@RequiredArgsConstructor
 当有属性使用@NonNull或者final修饰时，生成的代码中没有公共的无参构造方法，有私有的无参构造方法，
 相当于上面的一串注解再加上@NoArgsConstructor(access=AccessLevel.PRIVATE)注解
 
+#### 7.1 基本使用
+```java
+@Data
+public class Data01_Basics {
+    private String attribute1;
+    @NonNull private String attribute2;
+    private final String attribute3 = "";
+}
+```
+编译后结果为：
+```java
+public class Data01_Basics {
+    public Data01_Basics() {
+    }
 
+    public boolean equals(final Object o) {
+        if (o == this) {
+            return true;
+        } else if (!(o instanceof Data01_Basics)) {
+            return false;
+        } else {
+            Data01_Basics other = (Data01_Basics)o;
+            return other.canEqual(this);
+        }
+    }
 
-### 7.@EqualsAndHashcode 生成equals和hashCode方法
+    protected boolean canEqual(final Object other) {
+        return other instanceof Data01_Basics;
+    }
+
+    public int hashCode() {
+        int result = true;
+        return 1;
+    }
+
+    public String toString() {
+        return "Data01_Basics()";
+    }
+}
+```
+
+#### 7.2 `staticConstructor`
+如果指定其值，则生成的构造方法将是私有的，而创建的是可以用来创建实例的静态工厂方法。
+```java
+@Data(staticConstructor = "of")
+public class Data02_StaticConstructor {
+    private String attribute1;
+    private String attribute2;
+    private String attribute3;
+}
+```
+编译后结果为：
+```java
+public class Data02_StaticConstructor {
+    private String attribute1;
+    private String attribute2;
+    private String attribute3;
+
+    private Data02_StaticConstructor() {
+    }
+
+    public static Data02_StaticConstructor of() {
+        return new Data02_StaticConstructor();
+    }
+
+    public String getAttribute1() {
+        return this.attribute1;
+    }
+
+    public String getAttribute2() {
+        return this.attribute2;
+    }
+
+    public String getAttribute3() {
+        return this.attribute3;
+    }
+
+    public void setAttribute1(final String attribute1) {
+        this.attribute1 = attribute1;
+    }
+
+    public void setAttribute2(final String attribute2) {
+        this.attribute2 = attribute2;
+    }
+
+    public void setAttribute3(final String attribute3) {
+        this.attribute3 = attribute3;
+    }
+
+    public boolean equals(final Object o) {
+        if (o == this) {
+            return true;
+        } else if (!(o instanceof Data02_StaticConstructor)) {
+            return false;
+        } else {
+            Data02_StaticConstructor other = (Data02_StaticConstructor)o;
+            if (!other.canEqual(this)) {
+                return false;
+            } else {
+                label47: {
+                    Object this$attribute1 = this.getAttribute1();
+                    Object other$attribute1 = other.getAttribute1();
+                    if (this$attribute1 == null) {
+                        if (other$attribute1 == null) {
+                            break label47;
+                        }
+                    } else if (this$attribute1.equals(other$attribute1)) {
+                        break label47;
+                    }
+
+                    return false;
+                }
+
+                Object this$attribute2 = this.getAttribute2();
+                Object other$attribute2 = other.getAttribute2();
+                if (this$attribute2 == null) {
+                    if (other$attribute2 != null) {
+                        return false;
+                    }
+                } else if (!this$attribute2.equals(other$attribute2)) {
+                    return false;
+                }
+
+                Object this$attribute3 = this.getAttribute3();
+                Object other$attribute3 = other.getAttribute3();
+                if (this$attribute3 == null) {
+                    if (other$attribute3 != null) {
+                        return false;
+                    }
+                } else if (!this$attribute3.equals(other$attribute3)) {
+                    return false;
+                }
+
+                return true;
+            }
+        }
+    }
+
+    protected boolean canEqual(final Object other) {
+        return other instanceof Data02_StaticConstructor;
+    }
+
+    public int hashCode() {
+        int PRIME = true;
+        int result = 1;
+        Object $attribute1 = this.getAttribute1();
+        int result = result * 59 + ($attribute1 == null ? 43 : $attribute1.hashCode());
+        Object $attribute2 = this.getAttribute2();
+        result = result * 59 + ($attribute2 == null ? 43 : $attribute2.hashCode());
+        Object $attribute3 = this.getAttribute3();
+        result = result * 59 + ($attribute3 == null ? 43 : $attribute3.hashCode());
+        return result;
+    }
+
+    public String toString() {
+        return "Data02_StaticConstructor(attribute1=" + this.getAttribute1() + ", attribute2=" + this.getAttribute2() + ", attribute3=" + this.getAttribute3() + ")";
+    }
+}
+```
+
 ### 8.@value 会给所有属性加上final修饰并生成get方法、toString方法和@EqualsAndHashCode注解生成的代码。
 ### 9.@Builder 生成的代码为建造者模式（Builder Pattern）
 ### 9.1 @Singular 配合@Builder使用
