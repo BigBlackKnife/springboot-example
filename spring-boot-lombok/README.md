@@ -685,8 +685,279 @@ public class Data02_StaticConstructor {
 ```
 
 ### 8.@value 会给所有属性加上final修饰并生成get方法、toString方法和@EqualsAndHashCode注解生成的代码。
+
+#### 8.1 基本使用
+```java
+@Value
+public class Value01_Basics {
+    private String attribute1;
+    private String attribute2;
+    private String attribute3;
+}
+```
+编译后结果为：
+```java
+public final class Value01_Basics {
+    private final String attribute1;
+    private final String attribute2;
+    private final String attribute3;
+
+    public Value01_Basics(final String attribute1, final String attribute2, final String attribute3) {
+        this.attribute1 = attribute1;
+        this.attribute2 = attribute2;
+        this.attribute3 = attribute3;
+    }
+
+    public String getAttribute1() {
+        return this.attribute1;
+    }
+
+    public String getAttribute2() {
+        return this.attribute2;
+    }
+
+    public String getAttribute3() {
+        return this.attribute3;
+    }
+
+    public boolean equals(final Object o) {
+        if (o == this) {
+            return true;
+        } else if (!(o instanceof Value01_Basics)) {
+            return false;
+        } else {
+            Value01_Basics other;
+            label44: {
+                other = (Value01_Basics)o;
+                Object this$attribute1 = this.getAttribute1();
+                Object other$attribute1 = other.getAttribute1();
+                if (this$attribute1 == null) {
+                    if (other$attribute1 == null) {
+                        break label44;
+                    }
+                } else if (this$attribute1.equals(other$attribute1)) {
+                    break label44;
+                }
+
+                return false;
+            }
+
+            Object this$attribute2 = this.getAttribute2();
+            Object other$attribute2 = other.getAttribute2();
+            if (this$attribute2 == null) {
+                if (other$attribute2 != null) {
+                    return false;
+                }
+            } else if (!this$attribute2.equals(other$attribute2)) {
+                return false;
+            }
+
+            Object this$attribute3 = this.getAttribute3();
+            Object other$attribute3 = other.getAttribute3();
+            if (this$attribute3 == null) {
+                if (other$attribute3 != null) {
+                    return false;
+                }
+            } else if (!this$attribute3.equals(other$attribute3)) {
+                return false;
+            }
+
+            return true;
+        }
+    }
+
+    public int hashCode() {
+        int PRIME = true;
+        int result = 1;
+        Object $attribute1 = this.getAttribute1();
+        int result = result * 59 + ($attribute1 == null ? 43 : $attribute1.hashCode());
+        Object $attribute2 = this.getAttribute2();
+        result = result * 59 + ($attribute2 == null ? 43 : $attribute2.hashCode());
+        Object $attribute3 = this.getAttribute3();
+        result = result * 59 + ($attribute3 == null ? 43 : $attribute3.hashCode());
+        return result;
+    }
+
+    public String toString() {
+        return "Value01_Basics(attribute1=" + this.getAttribute1() + ", attribute2=" + this.getAttribute2() + ", attribute3=" + this.getAttribute3() + ")";
+    }
+}
+```
+
+#### 8.2 `staticConstructor`
+参照@Data注解
+
 ### 9.@Builder 生成的代码为建造者模式（Builder Pattern）
-### 9.1 @Singular 配合@Builder使用
+可以很简洁的创建对象，但此时该对象无法序列化为json且json也不能序列化为对象，还需要提供以下注解：
+@NoArgsConstructor+@AllArgsConstructor+@Getter（序列化为json时需要）+@Setter（反序列化为对象时需要）。
+
+#### 9.1 基本使用
+```java
+@Builder
+public class Builder01_Basics {
+    private String attribute1;
+    private String attribute2;
+    private String attribute3;
+}
+```
+编译后结果为：
+```java
+public class Builder01_Basics {
+    private String attribute1;
+    private String attribute2;
+    private String attribute3;
+
+    Builder01_Basics(final String attribute1, final String attribute2, final String attribute3) {
+        this.attribute1 = attribute1;
+        this.attribute2 = attribute2;
+        this.attribute3 = attribute3;
+    }
+
+    public static Builder01_Basics.Builder01_BasicsBuilder builder() {
+        return new Builder01_Basics.Builder01_BasicsBuilder();
+    }
+
+    public static class Builder01_BasicsBuilder {
+        private String attribute1;
+        private String attribute2;
+        private String attribute3;
+
+        Builder01_BasicsBuilder() {
+        }
+
+        public Builder01_Basics.Builder01_BasicsBuilder attribute1(final String attribute1) {
+            this.attribute1 = attribute1;
+            return this;
+        }
+
+        public Builder01_Basics.Builder01_BasicsBuilder attribute2(final String attribute2) {
+            this.attribute2 = attribute2;
+            return this;
+        }
+
+        public Builder01_Basics.Builder01_BasicsBuilder attribute3(final String attribute3) {
+            this.attribute3 = attribute3;
+            return this;
+        }
+
+        public Builder01_Basics build() {
+            return new Builder01_Basics(this.attribute1, this.attribute2, this.attribute3);
+        }
+
+        public String toString() {
+            return "Builder01_Basics.Builder01_BasicsBuilder(attribute1=" + this.attribute1 + ", attribute2=" + this.attribute2 + ", attribute3=" + this.attribute3 + ")";
+        }
+    }
+}
+```
+- `Builder01_BasicsBuilder b = Builder01_Basics.builder().attribute1("asd").attribute2("asdasd").attribute3("asdasd");`
+
+#### 9.2 @Singular 配合@Builder使用
+作用于集合类型的属性上，配合@Builder使用，如：
+```java
+@Builder
+public class Builder02_Singular {
+    private String attribute1;
+    private String attribute2;
+    @Singular(value = "attribute3")
+    private List<String> attribute3;
+}
+```
+编译后结果为：
+```java
+public class Builder02_Singular {
+    private String attribute1;
+    private String attribute2;
+    private List<String> attribute3;
+
+    Builder02_Singular(final String attribute1, final String attribute2, final List<String> attribute3) {
+        this.attribute1 = attribute1;
+        this.attribute2 = attribute2;
+        this.attribute3 = attribute3;
+    }
+
+    public static Builder02_Singular.Builder02_SingularBuilder builder() {
+        return new Builder02_Singular.Builder02_SingularBuilder();
+    }
+
+    public static class Builder02_SingularBuilder {
+        private String attribute1;
+        private String attribute2;
+        private ArrayList<String> attribute3;
+
+        Builder02_SingularBuilder() {
+        }
+
+        public Builder02_Singular.Builder02_SingularBuilder attribute1(final String attribute1) {
+            this.attribute1 = attribute1;
+            return this;
+        }
+
+        public Builder02_Singular.Builder02_SingularBuilder attribute2(final String attribute2) {
+            this.attribute2 = attribute2;
+            return this;
+        }
+
+        public Builder02_Singular.Builder02_SingularBuilder attribute3(final String attribute3) {
+            if (this.attribute3 == null) {
+                this.attribute3 = new ArrayList();
+            }
+
+            this.attribute3.add(attribute3);
+            return this;
+        }
+
+        public Builder02_Singular.Builder02_SingularBuilder attribute3(final Collection<? extends String> attribute3) {
+            if (attribute3 == null) {
+                throw new NullPointerException("attribute3 cannot be null");
+            } else {
+                if (this.attribute3 == null) {
+                    this.attribute3 = new ArrayList();
+                }
+
+                this.attribute3.addAll(attribute3);
+                return this;
+            }
+        }
+
+        public Builder02_Singular.Builder02_SingularBuilder clearAttribute3() {
+            if (this.attribute3 != null) {
+                this.attribute3.clear();
+            }
+
+            return this;
+        }
+
+        public Builder02_Singular build() {
+            List attribute3;
+            switch(this.attribute3 == null ? 0 : this.attribute3.size()) {
+            case 0:
+                attribute3 = Collections.emptyList();
+                break;
+            case 1:
+                attribute3 = Collections.singletonList(this.attribute3.get(0));
+                break;
+            default:
+                attribute3 = Collections.unmodifiableList(new ArrayList(this.attribute3));
+            }
+
+            return new Builder02_Singular(this.attribute1, this.attribute2, attribute3);
+        }
+
+        public String toString() {
+            return "Builder02_Singular.Builder02_SingularBuilder(attribute1=" + this.attribute1 + ", attribute2=" + this.attribute2 + ", attribute3=" + this.attribute3 + ")";
+        }
+    }
+}
+```
+创建语句：
+```java
+List<String> l = new ArrayList<>();
+l.add("测试1");
+l.add("测试2");
+Builder02_SingularBuilder b = Builder02_Singular.builder().attribute3(l);
+```
+
 ### 10.@Accessors 配合@Setter注解使用，可生成链式的set方法
 
 ## 其他注解
