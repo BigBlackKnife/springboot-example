@@ -959,6 +959,108 @@ Builder02_SingularBuilder b = Builder02_Singular.builder().attribute3(l);
 ```
 
 ### 10.@Accessors 配合@Setter注解使用，可生成链式的set方法
+注意：fluent和chain需要至少有一个为true。
+#### 10.1 `fluent`
+默认为false，为true时生成的set方法会return当前对象且get/set方法名都不再包含get/set。
+```java
+@Accessors(fluent = true)
+@Setter
+public class Accessors01_Fluent {
+    private String attribute1;
+    private String attribute2;
+    private String attribute3;
+}
+```
+编译后结果为：
+```java
+public class Accessors01_Fluent {
+    private String attribute1;
+    private String attribute2;
+    private String attribute3;
+
+    public Accessors01_Fluent() {
+    }
+
+    public Accessors01_Fluent attribute1(final String attribute1) {
+        this.attribute1 = attribute1;
+        return this;
+    }
+
+    public Accessors01_Fluent attribute2(final String attribute2) {
+        this.attribute2 = attribute2;
+        return this;
+    }
+
+    public Accessors01_Fluent attribute3(final String attribute3) {
+        this.attribute3 = attribute3;
+        return this;
+    }
+}
+```
+#### 10.2 `chain`
+默认为false，为true时生成的set方法会return当前对象且get/set方法名为正常的get/set方法格式。
+```java
+@Accessors(chain = true)
+@Setter
+public class Accessors02_Chain {
+    private String attribute1;
+    private String attribute2;
+    private String attribute3;
+}
+```
+编译后结果为
+```java
+public class Accessors02_Chain {
+    private String attribute1;
+    private String attribute2;
+    private String attribute3;
+
+    public Accessors02_Chain() {
+    }
+
+    public Accessors02_Chain setAttribute1(final String attribute1) {
+        this.attribute1 = attribute1;
+        return this;
+    }
+
+    public Accessors02_Chain setAttribute2(final String attribute2) {
+        this.attribute2 = attribute2;
+        return this;
+    }
+
+    public Accessors02_Chain setAttribute3(final String attribute3) {
+        this.attribute3 = attribute3;
+        return this;
+    }
+}
+```
+- 当`fluent`和`chain`都为`true`时，以`fluent`为准
+
+10.3 `prefix`
+比如属性名是user_name，加上注解 @Accessors(prefix = "user_")，生成的get/set方法中则会自动去掉“user_”前缀。其它不是以"user_"开头的属性则不会生成get/set方法。
+```java
+@Accessors(prefix = "pre_", chain = true)
+@Setter
+public class Accessors03_Prefix {
+    private String pre_attribute1;
+    private String attribute2;
+}
+```
+编译后结果为:
+```java
+public class Accessors03_Prefix {
+    private String pre_attribute1;
+    private String attribute2;
+
+    public Accessors03_Prefix() {
+    }
+
+    public Accessors03_Prefix setAttribute1(final String pre_attribute1) {
+        this.pre_attribute1 = pre_attribute1;
+        return this;
+    }
+}
+```
 
 ## 其他注解
 ### 11.@NonNull 触发空值检查
