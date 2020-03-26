@@ -1064,9 +1064,228 @@ public class Accessors03_Prefix {
 
 ## 其他注解
 ### 11.@NonNull 触发空值检查
+作用于属性、方法、参数、本地变量上，触发空值检查，为空时会抛出NullPointerException。作用于属性上并配合@Setter使用时生成代码如下：
+
+#### 11.1 基本使用
+```
+public class NonNull01_Basics {
+
+    private String name;
+
+    public static void getName(@NonNull NonNull01_Basics n) {
+        System.out.println(n.name);
+    }
+
+    public static void main(String[] args) {
+        NonNull01_Basics.getName(null);
+    }
+}
+```
+- 如上代码在执行时就会抛出`NullPointerException`异常，主要用于controller层接收数据时使用
+
+#### 11.2 配合`@Setter`使用
+```java
+@Setter
+public class NonNull02_Setter {
+    @NonNull
+    private String name;
+}
+```
+编译后结果为:
+```java
+public class NonNull02_Setter {
+    @NonNull
+    private String name;
+
+    public NonNull02_Setter() {
+    }
+
+    public void setName(@NonNull final String name) {
+        if (name == null) {
+            throw new NullPointerException("name is marked non-null but is null");
+        } else {
+            this.name = name;
+        }
+    }
+}
+```
+- 即set方法参数上自动添加`@NonNull`注解
+
 ### 12.@Log 作用于类上, 生成log注解
+#### 12.1 基本使用
+```java
+@Log
+public class Log01_basics {
+    public static void main(String[] args) {
+        log.info("测试 @Log 注解");
+    }
+}
+```
+- 使用注解后可以直接使用log对象进行日志操作，ombok替我们添加了如下语句：`private static final Logger log = Logger.getLogger(Log01_basics.class.getName());`
+
 ### 13.@CleanUp 作用于本地变量，可以完成资源的释放
-### 14.@Synchronized 给方法体加锁
+#### 13.1 基本使用
+```java
+public class Cleanup01_Basics {
+    public static void main(String[] args) {
+        try {
+            @Cleanup FileInputStream fis = new FileInputStream(new File("a.txt"));
+            @Cleanup FileOutputStream fos = new FileOutputStream("b.txt");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
+编译后结果为:
+```java
+public class Cleanup01_Basics {
+    public Cleanup01_Basics() {
+    }
+
+    public static void main(String[] args) {
+        try {
+            FileInputStream fis = new FileInputStream(new File("a.txt"));
+
+            try {
+                FileOutputStream fos = new FileOutputStream("b.txt");
+                if (Collections.singletonList(fos).get(0) != null) {
+                    fos.close();
+                }
+            } finally {
+                if (Collections.singletonList(fis).get(0) != null) {
+                    fis.close();
+                }
+
+            }
+        } catch (Exception var7) {
+            var7.printStackTrace();
+        }
+
+    }
+}
+```
+- 即自动添加了`close()`方法进行资源的释放
+
+### 14.@Synchronized 作用于方法，给方法体加锁
+```java
+public class Synchronized01_Basics {
+    @Synchronized
+    public void test(){
+        System.out.println("test @Synchronized");
+    }
+}
+```
+编译后结果为：
+```java
+public class Synchronized01_Basics {
+    private final Object $lock = new Object[0];
+
+    public Synchronized01_Basics() {
+    }
+
+    public void test() {
+        synchronized(this.$lock) {
+            System.out.println("test @Synchronized");
+        }
+    }
+}
+```
+
+#### 14.2 `name`
+使用@Synchronized("name")，其中name为属性名, 属性必须要存在。
+```java
+public class Synchronized02_name {
+    String name = "";
+    @Synchronized("name")
+    public void test(){
+        System.out.println("test @Synchronized");
+    }
+}
+```
+编译后结果为：
+```java
+public class Synchronized02_name {
+    String name = "";
+
+    public Synchronized02_name() {
+    }
+
+    public void test() {
+        synchronized(this.name) {
+            System.out.println("test @Synchronized");
+        }
+    }
+}
+```
+
 ### 15.@SneakyThrows 偷偷抛出Checked Exception
+作用于方法上，偷偷抛出Checked Exception，而无需在方法上的throws子句中声明需要抛出的异常。
+```java
+public class SneakyThrows01_Basics {
+    @SneakyThrows
+    public static void main(String[] args) {
+        FileReader fileReader = new FileReader("a.txt");
+    }
+}
+```
+编译后结果为：
+```java
+public class SneakyThrows01_Basics {
+    public SneakyThrows01_Basics() {
+    }
+
+    public static void main(String[] args) {
+        try {
+            new FileReader("a.txt");
+        } catch (Throwable var2) {
+            throw var2;
+        }
+    }
+}
+```
+- 也可以指定异常，如：@SneakyThrows(FileNotFoundException.class)。当指定了异常之后，lombok就会只捕捉我们指定的一种或者几种类型的异常，如果我们指定的类型没有被捕捉到，就会被抛到上一层。
+
 ### 16.@Delegate 实现代理模式
+#### 16.1 基本使用
+```java
+public class Delegate01_Basics {
+    private interface SimpleCollection {
+        boolean add(String item);
+        boolean remove(Object item);
+    }
+
+    @Delegate(types=SimpleCollection.class)
+    private final Collection<String> collection = new ArrayList<String>();
+}
+```
+编译后结果为：
+```java
+public class Delegate01_Basics {
+    private final Collection<String> collection = new ArrayList();
+
+    public Delegate01_Basics() {
+    }
+
+    public boolean add(final String item) {
+        return this.collection.add(item);
+    }
+
+    public boolean remove(final Object item) {
+        return this.collection.remove(item);
+    }
+
+    private interface SimpleCollection {
+        boolean add(String item);
+
+        boolean remove(Object item);
+    }
+}
+```
+
 ### 17.var/val 表示变量
+
+#### 17.1 `var`
+var可以用来表示任何类型的变量
+#### 17.2 `val`
+val可以用来表示任何类型的常量
