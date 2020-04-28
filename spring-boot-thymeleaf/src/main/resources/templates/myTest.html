@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Thymeleaf</title>
+</head>
+<body>
+    <div>
+        变量：<br />
+        <table>
+            <tr th:object="${user}">
+                <td th:text="*{name}">未命名</td>
+                <td th:text="*{nickName}">未命名</td>
+                <td th:text="*{sex} ? '男':'女'">未知</td>
+                <td th:text="*{age}">0</td>
+                <td th:text="${user.birthday}">2020-1-1</td>
+            </tr>
+        </table>
+    </div>
+
+    <hr />
+    <div>
+        方法：<br />
+        <span th:text="${mothodTest.split('，')[0]}"></span><br />
+        <span th:text="${mothodTest.split('，')[1]}"></span>
+    </div>
+
+    <hr />
+    <div>
+        字面值：<br />
+        <span th:text="${'thymeleaf'}"></span><br />
+        <span th:text="${652 + 3}"></span><br />
+    </div>
+
+    <hr />
+    <div>
+        拼接：<br />
+        <span th:text="'欢迎您:' + ${user.name} + '!'"></span><br />
+        <span th:text="|欢迎您:${user.name}!|"></span>
+    </div>
+
+    <hr />
+    <div>
+        运算：<br />
+        算数运算：<span th:text="${user.age}%2"></span><br/>
+        比较运算：<span th:text="${user.age} > 18"></span><br/>
+        条件运算：<span th:text="${user.sex} ? '男':'女'"></span><br/>
+    </div>
+
+    <hr />
+    <div>
+        逻辑判断：<br />
+        if：<span th:text="|${user.name}的年龄为${user.age}, 大于18岁|" th:if="${user.age} > 18"></span><br/>
+        unless：<span th:text="|${user.name}的年龄为${user.age}, 小于等于25岁|" th:unless="${user.age} > 25"></span><br/>
+    </div>
+
+    <hr />
+    <div>
+        循环：<br />
+        <table>
+            <tr th:each="user : ${users}">
+                <td th:text="${user.name}"></td>
+                <td th:text="${user.age}"></td>
+            </tr>
+        </table>
+        循环 - 迭代对象：<br />
+        <table>
+            <tr th:each="user,stat : ${users}">
+                <td th:text="${stat.count}"></td>
+                <td th:text="${user.name}"></td>
+                <td th:text="${user.age}"></td>
+                <td th:text="${stat.size}" th:if="${stat.last}"></td>
+            </tr>
+        </table>
+    </div>
+
+    <hr />
+    <div>
+        分支控制：
+        <span th:switch="${user.sex}">
+            <p th:case="'0'">女的</p>
+            <p th:case="'1'">男的</p>
+            <p th:case="*">不知道是啥</p>
+        </span>
+    </div>
+</body>
+</html>

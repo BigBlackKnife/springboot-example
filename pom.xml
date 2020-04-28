@@ -32,6 +32,7 @@
         <module>spring-boot-log-logback</module>
         <module>spring-boot-lombok</module>
         <module>spring-boot-shiro</module>
+        <module>spring-boot-thymeleaf</module>
     </modules>
 
     <build>
