@@ -33,6 +33,7 @@
         <module>spring-boot-lombok</module>
         <module>spring-boot-shiro</module>
         <module>spring-boot-thymeleaf</module>
+        <module>spring-boot-jasypt</module>
     </modules>
 
     <build>
