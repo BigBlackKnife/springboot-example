@@ -3,10 +3,24 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/spring-boot-examples.iml" filepath="$PROJECT_DIR$/spring-boot-examples.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-filesupload/spring-boot-filesupload.iml" filepath="$PROJECT_DIR$/spring-boot-filesupload/spring-boot-filesupload.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-filter/spring-boot-filter.iml" filepath="$PROJECT_DIR$/spring-boot-filter/spring-boot-filter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-interceptor/spring-boot-interceptor.iml" filepath="$PROJECT_DIR$/spring-boot-interceptor/spring-boot-interceptor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-jasypt/spring-boot-jasypt.iml" filepath="$PROJECT_DIR$/spring-boot-jasypt/spring-boot-jasypt.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-listener/spring-boot-listener.iml" filepath="$PROJECT_DIR$/spring-boot-listener/spring-boot-listener.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-log-log4j2/spring-boot-log-log4j2.iml" filepath="$PROJECT_DIR$/spring-boot-log-log4j2/spring-boot-log-log4j2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-log-logback/spring-boot-log-logback.iml" filepath="$PROJECT_DIR$/spring-boot-log-logback/spring-boot-log-logback.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-boot-mail/spring-boot-mail.iml" filepath="$PROJECT_DIR$/spring-boot-mail/spring-boot-mail.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-mybatis-plus/spring-boot-mybatis-plus.iml" filepath="$PROJECT_DIR$/spring-boot-mybatis-plus/spring-boot-mybatis-plus.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-mybatis-plus-dynamic-datasource/spring-boot-mybatis-plus-dynamic-datasource.iml" filepath="$PROJECT_DIR$/spring-boot-mybatis-plus-dynamic-datasource/spring-boot-mybatis-plus-dynamic-datasource.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-boot-rabbitmq/spring-boot-rabbitmq.iml" filepath="$PROJECT_DIR$/spring-boot-rabbitmq/spring-boot-rabbitmq.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-boot-redis/spring-boot-redis.iml" filepath="$PROJECT_DIR$/spring-boot-redis/spring-boot-redis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-redis-cache/spring-boot-redis-cache.iml" filepath="$PROJECT_DIR$/spring-boot-redis-cache/spring-boot-redis-cache.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-redis-session/spring-boot-redis-session.iml" filepath="$PROJECT_DIR$/spring-boot-redis-session/spring-boot-redis-session.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-boot-scheduler/spring-boot-scheduler.iml" filepath="$PROJECT_DIR$/spring-boot-scheduler/spring-boot-scheduler.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-shiro/spring-boot-shiro.iml" filepath="$PROJECT_DIR$/spring-boot-shiro/spring-boot-shiro.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-swagger2/spring-boot-swagger2.iml" filepath="$PROJECT_DIR$/spring-boot-swagger2/spring-boot-swagger2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-thymeleaf/spring-boot-thymeleaf.iml" filepath="$PROJECT_DIR$/spring-boot-thymeleaf/spring-boot-thymeleaf.iml" />
     </modules>
   </component>
 </project>

@@ -8,6 +8,10 @@
         <option value="$PROJECT_DIR$/spring-boot-redis/pom.xml" />
         <option value="$PROJECT_DIR$/spring-boot-scheduler/pom.xml" />
         <option value="$PROJECT_DIR$/spring-boot-rabbitmq/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-shiro/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-thymeleaf/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-jasypt/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-filesupload/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

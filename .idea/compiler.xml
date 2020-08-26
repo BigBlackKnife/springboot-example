@@ -6,30 +6,59 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="spring-boot-redis" />
+        <module name="spring-boot-filesupload" />
+        <module name="spring-boot-log-logback" />
+        <module name="filesupload" />
         <module name="spring-boot-scheduler" />
+        <module name="spring-boot-redis" />
+        <module name="spring-boot-redis-cache" />
         <module name="spring-boot-rabbitmq" />
         <module name="spring-boot-mail" />
+        <module name="spring-boot-listener" />
+        <module name="spring-boot-mybatis-plus" />
+        <module name="spring-boot-filter" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="filesupload" target="1.8" />
       <module name="speing-boot-redis" target="1.8" />
       <module name="spring-boot-examples" target="1.8" />
+      <module name="spring-boot-filesupload" target="1.8" />
+      <module name="spring-boot-filter" target="1.8" />
+      <module name="spring-boot-listener" target="1.8" />
+      <module name="spring-boot-log-logback" target="1.8" />
       <module name="spring-boot-lombok" target="1.8" />
       <module name="spring-boot-mail" target="1.8" />
+      <module name="spring-boot-mybatis-plus" target="1.8" />
       <module name="spring-boot-rabbitmq" target="1.8" />
       <module name="spring-boot-redis" target="1.8" />
+      <module name="spring-boot-redis-cache" target="1.8" />
       <module name="spring-boot-scheduler" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="filesupload" options="-parameters" />
       <module name="speing-boot-redis" options="-parameters" />
+      <module name="spring-boot-filesupload" options="-parameters" />
+      <module name="spring-boot-filter" options="-parameters" />
+      <module name="spring-boot-interceptor" options="-parameters" />
+      <module name="spring-boot-jasypt" options="-parameters" />
+      <module name="spring-boot-listener" options="-parameters" />
+      <module name="spring-boot-log-log4j2" options="-parameters" />
+      <module name="spring-boot-log-logback" options="-parameters" />
       <module name="spring-boot-lombok" options="-parameters" />
       <module name="spring-boot-mail" options="-parameters" />
+      <module name="spring-boot-mybatis-plus" options="-parameters" />
+      <module name="spring-boot-mybatis-plus-dynamic-datasource" options="-parameters" />
       <module name="spring-boot-rabbitmq" options="-parameters" />
       <module name="spring-boot-redis" options="-parameters" />
+      <module name="spring-boot-redis-cache" options="-parameters" />
+      <module name="spring-boot-redis-session" options="-parameters" />
       <module name="spring-boot-scheduler" options="-parameters" />
+      <module name="spring-boot-shiro" options="-parameters" />
+      <module name="spring-boot-swagger2" options="-parameters" />
+      <module name="spring-boot-thymeleaf" options="-parameters" />
     </option>
   </component>
 </project>

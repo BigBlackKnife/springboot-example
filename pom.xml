@@ -34,6 +34,7 @@
         <module>spring-boot-shiro</module>
         <module>spring-boot-thymeleaf</module>
         <module>spring-boot-jasypt</module>
+        <module>spring-boot-filesupload</module>
     </modules>
 
     <build>

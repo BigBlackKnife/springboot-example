@@ -1,26 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f3043591-9bd4-4669-8adf-d307b54f578c" name="Default Changelist" comment="redis demo提交 -- redis基本使用，redis缓存，redis集中管理sesion">
-      <change afterPath="$PROJECT_DIR$/spring-boot-rabbitmq/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-boot-rabbitmq/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-boot-rabbitmq/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-boot-rabbitmq/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-boot-rabbitmq/HELP.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-boot-rabbitmq/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-boot-rabbitmq/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-boot-rabbitmq/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-boot-rabbitmq/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-boot-rabbitmq/spring-boot-rabbitmq.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-boot-rabbitmq/src/main/java/com/blaife/rabbitmq/SpringBootRabbitmqApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-boot-rabbitmq/src/main/java/com/blaife/rabbitmq/config/RabbitConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-boot-rabbitmq/src/main/java/com/blaife/rabbitmq/model/Model.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-boot-rabbitmq/src/main/java/com/blaife/rabbitmq/receiver/RabbitReceiver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-boot-rabbitmq/src/main/java/com/blaife/rabbitmq/sender/RabbitSender.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-boot-rabbitmq/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-boot-rabbitmq/src/main/resources/img/AMQP.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-boot-rabbitmq/src/test/java/com/blaife/rabbitmq/RabbitTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-boot-rabbitmq/src/test/java/com/blaife/rabbitmq/SpringBootRabbitmqApplicationTests.java" afterDir="false" />
+    <list default="true" id="f3043591-9bd4-4669-8adf-d307b54f578c" name="Default Changelist" comment="filter .iml文件提交">
+      <change afterPath="$PROJECT_DIR$/spring-boot-filesupload/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-boot-filesupload/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-boot-filesupload/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-boot-filesupload/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-boot-filesupload/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-boot-filesupload/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-boot-filesupload/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-boot-filesupload/spring-boot-filesupload.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-boot-filesupload/src/main/java/com/blaife/SpringBootFilesuploadApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-boot-filesupload/src/main/java/com/blaife/controller/TestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-boot-filesupload/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-boot-filesupload/src/main/resources/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-boot-filesupload/src/test/java/com/blaife/SpringBootFilesuploadApplicationTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
@@ -33,10 +27,29 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="ExportToHTMLSettings">
+    <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/../spring-boot-examples\exportToHTML" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="FxmlFile" />
         <option value="HTML File" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -47,7 +60,7 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="E:/apache-maven-3.6.3" />
+        <option name="mavenHome" value="G:/Apache/maven" />
       </MavenGeneralSettings>
     </option>
   </component>
@@ -59,6 +72,9 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="MyBatisLogPluginparameters" value="Parameters:" />
+    <property name="MyBatisLogPluginpreparing" value="Preparing:" />
+    <property name="MyBatisLogPluginrunning" value="true" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
@@ -66,94 +82,112 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../LeetCode-Example" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Example\spring-boot-examples\spring-boot-shiro\src\main\resources\templates\user" />
       <recent name="E:\Example\spring-boot-examples\spring-boot-rabbitmq\src\main\resources\img" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.blaife.model" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Example\spring-boot-examples\spring-boot-jasypt\src\main\resources" />
+    </key>
   </component>
-  <component name="RunManager" selected="JUnit.RabbitTest.headerTest">
-    <configuration name="RabbitTest.DirectTestOne" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="spring-boot-rabbitmq" />
+  <component name="RestServicesNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="Found 25 services " type="fcff1e1b:RestServiceStructure$RootNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="RunManager" selected="Spring Boot.SpringBootFilesuploadApplication">
+    <configuration name="JasyptTool" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.blaife.utils.JasyptTool" />
+      <module name="spring-boot-jasypt" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.blaife.rabbitmq.*" />
+          <option name="PATTERN" value="com.blaife.utils.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.blaife.rabbitmq" />
-      <option name="MAIN_CLASS_NAME" value="com.blaife.rabbitmq.RabbitTest" />
-      <option name="METHOD_NAME" value="DirectTestOne" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SimulateListener" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.blaife.listener.simulate.SimulateListener" />
+      <module name="spring-boot-listener" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.blaife.listener.simulate.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JasyptTest.decryptPwd" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring-boot-jasypt" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.blaife.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.blaife" />
+      <option name="MAIN_CLASS_NAME" value="com.blaife.JasyptTest" />
+      <option name="METHOD_NAME" value="decryptPwd" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RabbitTest.fanoutTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="spring-boot-rabbitmq" />
+    <configuration name="JasyptTest.encryptPwd" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring-boot-jasypt" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.blaife.rabbitmq.*" />
+          <option name="PATTERN" value="com.blaife.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.blaife.rabbitmq" />
-      <option name="MAIN_CLASS_NAME" value="com.blaife.rabbitmq.RabbitTest" />
-      <option name="METHOD_NAME" value="fanoutTest" />
+      <option name="PACKAGE_NAME" value="com.blaife" />
+      <option name="MAIN_CLASS_NAME" value="com.blaife.JasyptTest" />
+      <option name="METHOD_NAME" value="encryptPwd" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RabbitTest.headerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="spring-boot-rabbitmq" />
+    <configuration name="SpringBootJasyptApplicationTests.encrypt" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring-boot-jasypt" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.blaife.rabbitmq.*" />
+          <option name="PATTERN" value="com.blaife.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.blaife.rabbitmq" />
-      <option name="MAIN_CLASS_NAME" value="com.blaife.rabbitmq.RabbitTest" />
-      <option name="METHOD_NAME" value="headerTest" />
+      <option name="PACKAGE_NAME" value="com.blaife" />
+      <option name="MAIN_CLASS_NAME" value="com.blaife.SpringBootJasyptApplicationTests" />
+      <option name="METHOD_NAME" value="encrypt" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RabbitTest.topicTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="spring-boot-rabbitmq" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.blaife.rabbitmq.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.blaife.rabbitmq" />
-      <option name="MAIN_CLASS_NAME" value="com.blaife.rabbitmq.RabbitTest" />
-      <option name="METHOD_NAME" value="topicTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RedisTest.testStringAccess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="spring-boot-redis" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.blaife.redis.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.blaife.redis" />
-      <option name="MAIN_CLASS_NAME" value="com.blaife.redis.RedisTest" />
-      <option name="METHOD_NAME" value="testStringAccess" />
-      <option name="TEST_OBJECT" value="method" />
+    <configuration name="FilesuploadApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="filesupload" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.blaife.FilesuploadApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -161,6 +195,55 @@
     <configuration name="SpeingBootRedisApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="speing-boot-redis" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.blaife.redis.SpeingBootRedisApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBootFilesuploadApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="spring-boot-filesupload" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.blaife.SpringBootFilesuploadApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBootFilterApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="spring-boot-filter" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.blaife.filter.SpringBootFilterApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBootInterceptorApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="spring-boot-interceptor" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.blaife.interceptor.SpringBootInterceptorApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBootJasyptApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="spring-boot-jasypt" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.blaife.SpringBootJasyptApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBootListenerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="spring-boot-listener" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.blaife.listener.SpringBootListenerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBootLogLog4j2Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="spring-boot-log-log4j2" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.blaife.SpringBootLogLog4j2Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBootLogSlf4jApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="spring-boot-log-logback" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.blaife.SpringBootLogSlf4jApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -186,6 +269,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SpringBootMybatisPlusApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="spring-boot-mybatis-plus" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.blaife.SpringBootMybatisPlusApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBootMybatisPlusDynamicDatasourceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="spring-boot-mybatis-plus-dynamic-datasource" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.blaife.SpringBootMybatisPlusDynamicDatasourceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SpringBootRabbitmqApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="spring-boot-rabbitmq" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.blaife.rabbitmq.SpringBootRabbitmqApplication" />
@@ -200,6 +297,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SpringBootRedisCacheApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="spring-boot-redis-cache" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.blaife.rcache.SpringBootRedisCacheApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBootRedisSessionApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="spring-boot-redis-session" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.blaife.rsesson.SpringBootRedisSessionApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SpringBootSchedulerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="spring-boot-scheduler" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.blaife.scheduler.SpringBootSchedulerApplication" />
@@ -207,13 +318,34 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SpringBootShiroApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="spring-boot-shiro" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.blaife.SpringBootShiroApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBootSwagger2Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="spring-boot-swagger2" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.blaife.swagger2.SpringBootSwagger2Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBootThymeleafApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="spring-boot-thymeleaf" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.blaife.SpringBootThymeleafApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.RabbitTest.headerTest" />
-        <item itemvalue="JUnit.RabbitTest.topicTest" />
-        <item itemvalue="JUnit.RabbitTest.fanoutTest" />
-        <item itemvalue="JUnit.RabbitTest.DirectTestOne" />
-        <item itemvalue="JUnit.RedisTest.testStringAccess" />
+        <item itemvalue="Application.SimulateListener" />
+        <item itemvalue="JUnit.JasyptTest.decryptPwd" />
+        <item itemvalue="JUnit.JasyptTest.encryptPwd" />
+        <item itemvalue="JUnit.SpringBootJasyptApplicationTests.encrypt" />
+        <item itemvalue="Application.JasyptTool" />
       </list>
     </recent_temporary>
   </component>
@@ -242,6 +374,32 @@
       <workItem from="1578759657905" duration="3368000" />
       <workItem from="1578801419776" duration="6370000" />
       <workItem from="1579153357167" duration="18846000" />
+      <workItem from="1585290561852" duration="142000" />
+      <workItem from="1585290716883" duration="1146000" />
+      <workItem from="1585294954438" duration="2256000" />
+      <workItem from="1585299275969" duration="15000" />
+      <workItem from="1585299308169" duration="206000" />
+      <workItem from="1585299540334" duration="1944000" />
+      <workItem from="1585304239700" duration="1005000" />
+      <workItem from="1585386615884" duration="10000" />
+      <workItem from="1585999680745" duration="3570000" />
+      <workItem from="1586341834485" duration="1388000" />
+      <workItem from="1587268979125" duration="417000" />
+      <workItem from="1587643843740" duration="5648000" />
+      <workItem from="1587710880996" duration="29917000" />
+      <workItem from="1587870511811" duration="18393000" />
+      <workItem from="1588226907111" duration="6650000" />
+      <workItem from="1588258088971" duration="2558000" />
+      <workItem from="1588309214029" duration="2581000" />
+      <workItem from="1588342472534" duration="7338000" />
+      <workItem from="1589155068589" duration="4169000" />
+      <workItem from="1592400891747" duration="41000" />
+      <workItem from="1595650796922" duration="1174000" />
+      <workItem from="1596245747294" duration="700000" />
+      <workItem from="1596246872048" duration="1236000" />
+      <workItem from="1596249468752" duration="597000" />
+      <workItem from="1598089975819" duration="6019000" />
+      <workItem from="1598450016228" duration="3723000" />
     </task>
     <task id="LOCAL-00001" summary="完全修改项目结构，springboot案例重新开始">
       <created>1578760272158</created>
@@ -299,7 +457,140 @@
       <option name="project" value="LOCAL" />
       <updated>1578838570021</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="log4j2 .iml文件提交">
+      <created>1585301167858</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1585301167858</updated>
+    </task>
+    <task id="LOCAL-00010" summary="logback .iml文件提交">
+      <created>1585301189808</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1585301189808</updated>
+    </task>
+    <task id="LOCAL-00011" summary="mybatis-plus .iml文件提交">
+      <created>1585301219925</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1585301219925</updated>
+    </task>
+    <task id="LOCAL-00012" summary="mybatis-plus-dynamic-datasource .iml文件提交">
+      <created>1585301248636</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1585301248636</updated>
+    </task>
+    <task id="LOCAL-00013" summary="redis-cache .iml文件提交">
+      <created>1585301311946</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1585301311946</updated>
+    </task>
+    <task id="LOCAL-00014" summary="redis-session .iml文件提交">
+      <created>1585301331368</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1585301331368</updated>
+    </task>
+    <task id="LOCAL-00015" summary="swagger2 .iml文件提交">
+      <created>1585301346422</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1585301346422</updated>
+    </task>
+    <task id="LOCAL-00016" summary="filter .iml文件提交">
+      <created>1585301367375</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1585301367375</updated>
+    </task>
+    <task id="LOCAL-00017" summary="interceptor .iml文件提交">
+      <created>1585301385557</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1585301385557</updated>
+    </task>
+    <task id="LOCAL-00018" summary="listener .iml文件提交">
+      <created>1585301396619</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1585301396619</updated>
+    </task>
+    <task id="LOCAL-00019" summary="springboot - example pom文件提交">
+      <created>1585301423641</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1585301423641</updated>
+    </task>
+    <task id="LOCAL-00020" summary="shiro案例提交">
+      <created>1587833244793</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1587833244793</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Thymeleaf案例提交">
+      <created>1588084235457</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1588084235457</updated>
+    </task>
+    <task id="LOCAL-00022" summary="jasypt : 为Spring Boot应用提供property sources的加密支持">
+      <created>1588346523733</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1588346523733</updated>
+    </task>
+    <task id="LOCAL-00023" summary="jasypt模块提交">
+      <created>1588346555590</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1588346555590</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Jasypt 文档提交">
+      <created>1588392704901</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1588392704901</updated>
+    </task>
+    <task id="LOCAL-00025" summary="监听器 -- 模拟监听器">
+      <created>1589173870751</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1589173870751</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Readme文档提交">
+      <created>1595651269121</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1595651269121</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Readme文档提交">
+      <created>1595651753030</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1595651753030</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -313,102 +604,155 @@
     <MESSAGE value="redis demo提交 -- redis基本使用，redis缓存，redis集中管理sesion" />
     <MESSAGE value="springtask demo提交 -- 定时任务的基本操作" />
     <MESSAGE value="加入scheduler子模块" />
-    <option name="LAST_COMMIT_MESSAGE" value="加入scheduler子模块" />
+    <MESSAGE value="log4j2 .iml文件提交" />
+    <MESSAGE value="logback .iml文件提交" />
+    <MESSAGE value="mybatis-plus .iml文件提交" />
+    <MESSAGE value="mybatis-plus-dynamic-datasource .iml文件提交" />
+    <MESSAGE value="redis-cache .iml文件提交" />
+    <MESSAGE value="redis-session .iml文件提交" />
+    <MESSAGE value="swagger2 .iml文件提交" />
+    <MESSAGE value="filter .iml文件提交" />
+    <MESSAGE value="interceptor .iml文件提交" />
+    <MESSAGE value="listener .iml文件提交" />
+    <MESSAGE value="springboot - example pom文件提交" />
+    <MESSAGE value="shiro案例提交" />
+    <MESSAGE value="Thymeleaf案例提交" />
+    <MESSAGE value="jasypt : 为Spring Boot应用提供property sources的加密支持" />
+    <MESSAGE value="jasypt模块提交" />
+    <MESSAGE value="Jasypt 文档提交" />
+    <MESSAGE value="监听器 -- 模拟监听器" />
+    <MESSAGE value="Readme文档提交" />
+    <option name="LAST_COMMIT_MESSAGE" value="Readme文档提交" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="361" y="71" key="#Project_Structure" timestamp="1578762415709">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="2433" y="200" key="#Notifications" timestamp="1595651511710">
+      <screen x="1920" y="0" width="1842" height="1080" />
     </state>
-    <state x="361" y="71" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1578762415709" />
-    <state x="574" y="114" key="#com.intellij.ide.util.MemberChooser" timestamp="1579184410597">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="2433" y="200" key="#Notifications/62.0.1474.864/1920.0.1842.1080@1920.0.1842.1080" timestamp="1595651511710" />
+    <state x="2472" y="180" key="#Plugins" timestamp="1596249407332">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="574" y="114" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1579184410597" />
-    <state x="363" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1578762151550">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="2472" y="180" key="#Plugins/62.0.1474.864/1920.0.1920.1040@1920.0.1920.1040" timestamp="1596249407331" />
+    <state x="566" y="0" key="CommitChangelistDialog2" timestamp="1598456253364">
+      <screen x="63" y="0" width="1857" height="1080" />
     </state>
-    <state x="363" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1578762151550" />
-    <state x="184" y="6" key="CommitChangelistDialog2" timestamp="1579196746278">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="2419" y="0" key="CommitChangelistDialog2/62.0.1474.864/1920.0.1842.1080@1920.0.1842.1080" timestamp="1595651751606" />
+    <state x="461" y="0" key="CommitChangelistDialog2/62.0.1474.864/1920.0.1842.1080@62.0.1474.864" timestamp="1595651267553" />
+    <state x="566" y="0" key="CommitChangelistDialog2/63.0.1857.1080@63.0.1857.1080" timestamp="1598456253364" />
+    <state x="2606" y="212" key="FileChooserDialogImpl" timestamp="1596250074606">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2273" y="10" key="CommitChangelistDialog2/0.0.1536.824/1920.0.1536.824@1920.0.1536.824" timestamp="1578838568633" />
-    <state x="184" y="6" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1579196746278" />
-    <state x="2469" y="168" key="FileChooserDialogImpl" timestamp="1578813728313">
-      <screen x="1920" y="0" width="1536" height="824" />
+    <state x="526" y="176" key="FileChooserDialogImpl/0.0.1473.864@0.0.1473.864" timestamp="1592400931542" />
+    <state x="2606" y="212" key="FileChooserDialogImpl/62.0.1474.864/1920.0.1920.1040@1920.0.1920.1040" timestamp="1596250074606" />
+    <state width="1014" height="381" key="GridCell.Tab.0.bottom" timestamp="1598456061787">
+      <screen x="63" y="0" width="1857" height="1080" />
     </state>
-    <state x="2469" y="168" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1536.824@1920.0.1536.824" timestamp="1578813728313" />
-    <state width="1493" height="437" key="GridCell.Tab.0.bottom" timestamp="1579194190352">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1014" height="381" key="GridCell.Tab.0.bottom/63.0.1857.1080@63.0.1857.1080" timestamp="1598456061787" />
+    <state width="1801" height="382" key="GridCell.Tab.0.bottom/78.0.1842.1080@78.0.1842.1080" timestamp="1598196660566" />
+    <state width="1014" height="381" key="GridCell.Tab.0.center" timestamp="1598456061787">
+      <screen x="63" y="0" width="1857" height="1080" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1536.824@1920.0.1536.824" timestamp="1578838283963" />
-    <state width="1493" height="437" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1579194190352" />
-    <state width="1493" height="437" key="GridCell.Tab.0.center" timestamp="1579194190352">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1014" height="381" key="GridCell.Tab.0.center/63.0.1857.1080@63.0.1857.1080" timestamp="1598456061787" />
+    <state width="1801" height="382" key="GridCell.Tab.0.center/78.0.1842.1080@78.0.1842.1080" timestamp="1598196660566" />
+    <state width="1014" height="381" key="GridCell.Tab.0.left" timestamp="1598456061787">
+      <screen x="63" y="0" width="1857" height="1080" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1536.824@1920.0.1536.824" timestamp="1578838283962" />
-    <state width="1493" height="437" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1579194190352" />
-    <state width="1493" height="437" key="GridCell.Tab.0.left" timestamp="1579194190352">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1014" height="381" key="GridCell.Tab.0.left/63.0.1857.1080@63.0.1857.1080" timestamp="1598456061787" />
+    <state width="1801" height="382" key="GridCell.Tab.0.left/78.0.1842.1080@78.0.1842.1080" timestamp="1598196660565" />
+    <state width="1014" height="381" key="GridCell.Tab.0.right" timestamp="1598456061787">
+      <screen x="63" y="0" width="1857" height="1080" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1536.824@1920.0.1536.824" timestamp="1578838283962" />
-    <state width="1493" height="437" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1579194190352" />
-    <state width="1493" height="437" key="GridCell.Tab.0.right" timestamp="1579194190352">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1014" height="381" key="GridCell.Tab.0.right/63.0.1857.1080@63.0.1857.1080" timestamp="1598456061787" />
+    <state width="1801" height="382" key="GridCell.Tab.0.right/78.0.1842.1080@78.0.1842.1080" timestamp="1598196660566" />
+    <state width="1014" height="275" key="GridCell.Tab.1.bottom" timestamp="1598456137364">
+      <screen x="63" y="0" width="1857" height="1080" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1536.824@1920.0.1536.824" timestamp="1578838283962" />
-    <state width="1493" height="437" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1579194190352" />
-    <state width="1493" height="264" key="GridCell.Tab.1.bottom" timestamp="1579188084168">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1014" height="275" key="GridCell.Tab.1.bottom/63.0.1857.1080@63.0.1857.1080" timestamp="1598456137364" />
+    <state width="1801" height="382" key="GridCell.Tab.1.bottom/78.0.1842.1080@78.0.1842.1080" timestamp="1598196660567" />
+    <state width="1014" height="275" key="GridCell.Tab.1.center" timestamp="1598456137364">
+      <screen x="63" y="0" width="1857" height="1080" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.1.bottom/0.0.1536.824/1920.0.1536.824@1920.0.1536.824" timestamp="1578838283963" />
-    <state width="1493" height="264" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1579188084168" />
-    <state width="1493" height="264" key="GridCell.Tab.1.center" timestamp="1579188084168">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1014" height="275" key="GridCell.Tab.1.center/63.0.1857.1080@63.0.1857.1080" timestamp="1598456137364" />
+    <state width="1801" height="382" key="GridCell.Tab.1.center/78.0.1842.1080@78.0.1842.1080" timestamp="1598196660566" />
+    <state width="1014" height="275" key="GridCell.Tab.1.left" timestamp="1598456137364">
+      <screen x="63" y="0" width="1857" height="1080" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.1.center/0.0.1536.824/1920.0.1536.824@1920.0.1536.824" timestamp="1578838283963" />
-    <state width="1493" height="264" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1579188084168" />
-    <state width="1493" height="264" key="GridCell.Tab.1.left" timestamp="1579188084168">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1014" height="275" key="GridCell.Tab.1.left/63.0.1857.1080@63.0.1857.1080" timestamp="1598456137364" />
+    <state width="1801" height="382" key="GridCell.Tab.1.left/78.0.1842.1080@78.0.1842.1080" timestamp="1598196660566" />
+    <state width="1014" height="275" key="GridCell.Tab.1.right" timestamp="1598456137364">
+      <screen x="63" y="0" width="1857" height="1080" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.1.left/0.0.1536.824/1920.0.1536.824@1920.0.1536.824" timestamp="1578838283963" />
-    <state width="1493" height="264" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1579188084168" />
-    <state width="1493" height="264" key="GridCell.Tab.1.right" timestamp="1579188084168">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1014" height="275" key="GridCell.Tab.1.right/63.0.1857.1080@63.0.1857.1080" timestamp="1598456137364" />
+    <state width="1801" height="382" key="GridCell.Tab.1.right/78.0.1842.1080@78.0.1842.1080" timestamp="1598196660567" />
+    <state width="1014" height="381" key="GridCell.Tab.2.bottom" timestamp="1598456061571">
+      <screen x="63" y="0" width="1857" height="1080" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.1.right/0.0.1536.824/1920.0.1536.824@1920.0.1536.824" timestamp="1578838283963" />
-    <state width="1493" height="264" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1579188084168" />
-    <state x="480" y="123" key="RollbackChangesDialog" timestamp="1578762462334">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1014" height="381" key="GridCell.Tab.2.bottom/63.0.1857.1080@63.0.1857.1080" timestamp="1598456061571" />
+    <state width="1801" height="382" key="GridCell.Tab.2.bottom/78.0.1842.1080@78.0.1842.1080" timestamp="1598196660567" />
+    <state width="1014" height="381" key="GridCell.Tab.2.center" timestamp="1598456061571">
+      <screen x="63" y="0" width="1857" height="1080" />
     </state>
-    <state x="480" y="123" key="RollbackChangesDialog/0.0.1536.824@0.0.1536.824" timestamp="1578762462334" />
-    <state x="2281" y="146" key="Vcs.Push.Dialog.v2" timestamp="1578838576518">
-      <screen x="1920" y="0" width="1536" height="824" />
+    <state width="1014" height="381" key="GridCell.Tab.2.center/63.0.1857.1080@63.0.1857.1080" timestamp="1598456061571" />
+    <state width="1801" height="382" key="GridCell.Tab.2.center/78.0.1842.1080@78.0.1842.1080" timestamp="1598196660567" />
+    <state width="1014" height="381" key="GridCell.Tab.2.left" timestamp="1598456061571">
+      <screen x="63" y="0" width="1857" height="1080" />
     </state>
-    <state x="2281" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.1536.824@1920.0.1536.824" timestamp="1578838576518" />
-    <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1578763024363" />
-    <state x="449" y="237" key="com.intellij.ide.util.TipDialog" timestamp="1578801420899">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1014" height="381" key="GridCell.Tab.2.left/63.0.1857.1080@63.0.1857.1080" timestamp="1598456061571" />
+    <state width="1801" height="382" key="GridCell.Tab.2.left/78.0.1842.1080@78.0.1842.1080" timestamp="1598196660567" />
+    <state width="1014" height="381" key="GridCell.Tab.2.right" timestamp="1598456061571">
+      <screen x="63" y="0" width="1857" height="1080" />
     </state>
-    <state x="449" y="237" key="com.intellij.ide.util.TipDialog/0.0.1536.824/1920.0.1536.824@0.0.1536.824" timestamp="1578801420899" />
-    <state x="449" y="237" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1578759658395" />
-    <state x="355" y="28" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1579184378603">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1014" height="381" key="GridCell.Tab.2.right/63.0.1857.1080@63.0.1857.1080" timestamp="1598456061571" />
+    <state width="1801" height="382" key="GridCell.Tab.2.right/78.0.1842.1080@78.0.1842.1080" timestamp="1598196660567" />
+    <state x="142" y="285" width="1448" height="708" key="SettingsEditor" timestamp="1598454085068">
+      <screen x="63" y="0" width="1857" height="1080" />
     </state>
-    <state x="355" y="28" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.824@0.0.1536.824" timestamp="1579184378603" />
-    <state x="2098" y="114" key="new project wizard" timestamp="1578838705079">
-      <screen x="1920" y="0" width="1536" height="824" />
+    <state x="2003" y="73" key="SettingsEditor/0.0.1536.864/1920.0.1920.1080@1920.0.1920.1080" timestamp="1596247064409" />
+    <state x="2224" y="306" width="1448" height="708" key="SettingsEditor/62.0.1474.864/1920.0.1920.1040@1920.0.1920.1040" timestamp="1596250064020" />
+    <state x="142" y="285" key="SettingsEditor/63.0.1857.1080@63.0.1857.1080" timestamp="1598454085068" />
+    <state x="2352" y="191" key="Vcs.Push.Dialog.v2" timestamp="1595651787419">
+      <screen x="1920" y="0" width="1842" height="1080" />
     </state>
-    <state x="178" y="114" key="new project wizard/0.0.1536.824/1920.0.1536.824@0.0.1536.824" timestamp="1578811657586" />
-    <state x="2098" y="114" key="new project wizard/0.0.1536.824/1920.0.1536.824@1920.0.1536.824" timestamp="1578838705079" />
-    <state x="178" y="114" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1578760148389" />
-    <state x="425" y="187" key="run.anything.popup" timestamp="1579186644968">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="2352" y="191" key="Vcs.Push.Dialog.v2/62.0.1474.864/1920.0.1842.1080@1920.0.1842.1080" timestamp="1595651787419" />
+    <state x="408" y="153" key="Vcs.Push.Dialog.v2/62.0.1474.864/1920.0.1842.1080@62.0.1474.864" timestamp="1595651436918" />
+    <state x="605" y="311" key="com.intellij.ide.util.TipDialog" timestamp="1598451871215">
+      <screen x="63" y="0" width="1857" height="1080" />
     </state>
-    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1579186644968" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1579188794322">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="431" y="249" key="com.intellij.ide.util.TipDialog/0.0.1473.864@0.0.1473.864" timestamp="1592400892717" />
+    <state x="2481" y="311" key="com.intellij.ide.util.TipDialog/0.0.1536.864/1920.0.1920.1080@1920.0.1920.1080" timestamp="1596246961530" />
+    <state x="493" y="249" key="com.intellij.ide.util.TipDialog/62.0.1474.864/1920.0.1842.1080@62.0.1474.864" timestamp="1595651187283" />
+    <state x="2481" y="299" key="com.intellij.ide.util.TipDialog/62.0.1474.864/1920.0.1920.1040@1920.0.1920.1040" timestamp="1596249468860" />
+    <state x="605" y="311" key="com.intellij.ide.util.TipDialog/63.0.1857.1080@63.0.1857.1080" timestamp="1598451871215" />
+    <state x="616" y="311" key="com.intellij.ide.util.TipDialog/78.0.1842.1080@78.0.1842.1080" timestamp="1598089975464" />
+    <state x="520" y="260" key="git4idea.merge.GitPullDialog" timestamp="1598093718358">
+      <screen x="78" y="0" width="1842" height="1080" />
     </state>
-    <state x="2351" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/1920.0.1536.824@1920.0.1536.824" timestamp="1579176464043" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1579188794322" />
+    <state x="2362" y="260" key="git4idea.merge.GitPullDialog/62.0.1474.864/1920.0.1842.1080@1920.0.1842.1080" timestamp="1595651483276" />
+    <state x="416" y="208" key="git4idea.merge.GitPullDialog/62.0.1474.864/1920.0.1842.1080@62.0.1474.864" timestamp="1595651303638" />
+    <state x="520" y="260" key="git4idea.merge.GitPullDialog/78.0.1842.1080@78.0.1842.1080" timestamp="1598093718358" />
+    <state x="248" y="198" key="new project wizard" timestamp="1598093808933">
+      <screen x="78" y="0" width="1842" height="1080" />
+    </state>
+    <state x="248" y="198" key="new project wizard/78.0.1842.1080@78.0.1842.1080" timestamp="1598093808933" />
+    <state x="1051" y="254" key="run.anything.popup" timestamp="1598195967315">
+      <screen x="78" y="0" width="1842" height="1080" />
+    </state>
+    <state x="1051" y="254" key="run.anything.popup/78.0.1842.1080@78.0.1842.1080" timestamp="1598195967315" />
+    <state x="594" y="190" width="806" height="889" key="search.everywhere.popup" timestamp="1598159326217">
+      <screen x="78" y="0" width="1842" height="1080" />
+    </state>
+    <state x="2458" y="183" width="840" height="856" key="search.everywhere.popup/62.0.1474.864/1920.0.1920.1040@1920.0.1920.1040" timestamp="1596249389451" />
+    <state x="594" y="190" width="806" height="889" key="search.everywhere.popup/78.0.1842.1080@78.0.1842.1080" timestamp="1598159326217" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/spring-boot-filesupload/src/main/java/com/blaife/controller/TestController.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
