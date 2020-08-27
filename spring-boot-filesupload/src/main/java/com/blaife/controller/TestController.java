@@ -71,9 +71,9 @@ public class TestController {
 
         try {
 
-            for (int i = 0; i < files.length; i++) {
-                if (files[i] != null) {
-                    executeUpload(uploadDir, files[i]);
+            for (MultipartFile file : files) {
+                if (file != null && file.getSize() > 0) {
+                    executeUpload(uploadDir, file);
                 }
             }
 
